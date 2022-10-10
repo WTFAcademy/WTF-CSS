@@ -25,7 +25,7 @@ WTF CSS教程，总结/搬运自MDN CSS教程，帮助新人快速入门CSS，�
 
 **第8讲：处理特殊元素** （图像、媒体、表单、表格）
 
-**第9讲：布局** （提一下正常布局、弹性、网格、浮动、定位、多栏式）
+**第9讲：布局** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/09_Layout)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/09_Layout/readme.md)】
 
 **第10讲：弹性布局**
 
