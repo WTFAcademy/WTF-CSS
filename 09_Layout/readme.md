@@ -64,23 +64,7 @@ Flexbox 是 CSS 弹性盒子布局模块（[Flexible Box Layout](https://develop
 </div>
 ```
 
-<div class="demo1 wrapper">
-  <div class="box1">WTF-HTML</div>
-  <div class="box2">WTF-CSS</div>
-  <div class="box3">WTF-Solidity</div>
-</div>
-
-<style>
-  .demo1 {
-    display: flex;
-  }
-  .wrapper > div {
-    border-radius: 5px;
-    color: #fff;
-    background-color: #4558df;
-    padding: 1em;
-  }
-</style>
+![](./img/9-1.png)
 
 ### 设置 flex 属性
 
@@ -104,20 +88,7 @@ Flexbox 是 CSS 弹性盒子布局模块（[Flexible Box Layout](https://develop
 </div>
 ```
 
-<div class="demo2 wrapper">
-  <div class="box1">WTF-HTML</div>
-  <div class="box2">WTF-CSS</div>
-  <div class="box3">WTF-Solidity</div>
-</div>
-
-<style>
-  .demo2 {
-    display: flex;
-  }
-  .demo2 > div {
-    flex: 1;
-  }
-</style>
+![](./img/9-2.png)
 
 深入了解 Flex 布局，请看 [Flex 布局](https://github.com/WTFAcademy/WTF-CSS/blob/main/10_Flex/readme.md) 章节。
 
@@ -150,23 +121,7 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 </div>
 ```
 
-<div class="demo3 wrapper">
-  <div class="box1">WTF-HTML</div>
-  <div class="box2">WTF-CSS</div>
-  <div class="box3">WTF-Solidity</div>
-  <div class="box4">WTF-Ethers</div>
-  <div class="box5">WTF-gm</div>
-  <div class="box6">WTF-ClosedSource</div>
-</div>
-
-<style>
-  .demo3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    grid-gap: 10px;
-  }
-</style>
+![](./img/9-3.png)
 
 ### 在网格内放置元素
 
@@ -204,35 +159,7 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 </div>
 ```
 
-<div class="demo4 wrapper">
-  <div class="box1">WTF-HTML</div>
-  <div class="box2">WTF-CSS</div>
-  <div class="box3">WTF-Solidity</div>
-</div>
-
-<style>
-  .demo4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    grid-gap: 10px;
-  }
-
-  .demo4 .box1 {
-    grid-column: 2 / 4;
-    grid-row: 1;
-  }
-
-  .demo4 .box2 {
-    grid-column: 1;
-    grid-row: 1 / 3;
-  }
-
-  .demo4 .box3 {
-    grid-row: 2;
-    grid-column: 3;
-  }
-</style>
+![](./img/9-4.png)
 
 为了找到更多关于 Flexbox 的信息，请看 [Flex 布局](https://github.com/WTFAcademy/WTF-CSS/blob/main/10_Flex/readme.md) 章节。
 
@@ -268,20 +195,7 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 }
 ```
 
-<h1>Simple float example</h1>
-
-<div class="demo5 box">Float</div>
-
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
-
-<style>
-  .demo5 {
-    float: left;
-    width: 150px;
-    height: 150px;
-    margin-right: 30px;
-  }
-</style>
+![](./img/9-5.png)
 
 ## 多列布局
 
@@ -308,18 +222,7 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 }
 ```
 
-<div class="demo6 container">
-  <h1>Multi-column layout</h1>
-
-  <p>Paragraph 1.</p>
-  <p>Paragraph 2.</p>
-</div>
-
-<style>
-  .demo6 {
-    column-width: 200px;
-  }
-</style>
+![](./img/9-6.png)
 
 ## 总结
 
