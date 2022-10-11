@@ -28,13 +28,13 @@ WTF CSS教程，总结/搬运自MDN CSS教程[开发者工具](https://developer
 
 ![](./img/16-3.jpg)
 
-元素(Element):DOM 浏览器和 CSS 编辑器
+元素(Elements):DOM 浏览器和 CSS 编辑器
 
-开发者工具在打开时默认为检查器页面，如下图所示。这个工具可以让你看到你的网页的 HTML 运行时的样子，以及哪些 CSS 规则被应用到了页面上元素。它还允许您立即修改 HTML 和 CSS 并在浏览器中实时观察修改的结果。
+开发者工具在打开时默认为Elements页面，如下图所示。这个工具可以让你看到你的网页的 HTML 运行时的样子，以及哪些 CSS 规则被应用到了页面上元素。它还允许您立即修改 HTML 和 CSS 并在浏览器中实时观察修改的结果。
 
 ![](./img/16-4.jpg)
 
-如果你看不到Element,
+如果你看不到Elements,
 
 1. 点击“检查”选项卡
 2. 在 Internet Explorer 中，点击 DOM Explorer，或按 Ctrl + 1
