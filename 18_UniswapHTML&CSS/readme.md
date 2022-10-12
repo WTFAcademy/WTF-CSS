@@ -10,11 +10,11 @@ WTF CSS教程，总结/搬运自[MDN CSS教程](https://developer.mozilla.org/zh
 
 ---
 
-这一讲，我们将在WTF HTML第九讲UniswapHTML的基础上给它增加CSS样式表，最终效果如下：
+这一讲，我们将在WTF HTML第九讲UniswapHTML的基础上用预处理器less给它增加CSS样式表，最终效果如下：
 
 ![](./img/18-1.jpg)
 
-**注意**：本讲所用的HTML内容在之前的基础上做了略微的调整，想要练习的学员请下载本讲中最新的HTML文件
+**注意**：本讲所用的HTML内容在之前的基础上做了略微的调整，想要练习的学员请下载本讲中最新的文件
 
 ## background
 
@@ -32,7 +32,7 @@ body {
 
 ![](./img/18-2.jpg)
 
-有同学的第一反应可能想用flex，但flex最适合使用的情况是子元素的宽度相同，显然这里并不符合，因此我们可以使用浮动。左右子元素的浮动很简单，但中间元素浮动后想要让它居中，除了要让`right=50%`,还得让`margin-right: -140px`（`140px`是中间元素宽度的一半），否则会让它的右边居中。
+有同学的第一反应可能想用flex，但flex最适合使用的情况是子元素的宽度相同，显然这里并不符合，因此我们可以使用浮动。左右子元素的浮动很简单，但中间元素浮动后想要让它居中，除了要让`right=50%`，还得让`margin-right: -140px`（`140px`是中间元素宽度的一半），否则会让它的右边居中。
 
 `border-radius`不要设置成百分比，因为元素的宽高不同，设置成行高的一半即可。
 
@@ -149,7 +149,7 @@ body {
 }
 ```
 
-接着是`swap-page-header`,`margin`设置为`10px auto`可以让它水平居中。
+接着是`swap-page-header`，`margin`设置为`10px auto`可以让它水平居中。
 
 ```css
 &>.swap-page-header {
@@ -231,7 +231,7 @@ body {
         }
 ```
 
-然后是尾部连接钱包的`button`,这里未涉及到位置的赋值。
+然后是尾部连接钱包的`button`，这里未涉及到位置的赋值。
 
 ```css
         & .swap-page-footer-connect{
@@ -251,7 +251,7 @@ body {
 
 最后就剩下`chooseLanguage`和`gasPriceAndBlockNumber`的样式，这两部分比较简单。
 
-先将`chooseLanguage`的`display`设置为`inline-block`，方便我们调整它的宽度，宽度设置好之后就可以通过`left`、`margin-left`和`top`调整它的位置。
+先将`chooseLanguage`的`display`设置为`inline-block`，方便我们调整它的宽度，宽度设置好之后就可以通过`position`、`left`、`margin-left`和`top`调整它的位置。
 
 ```css
     &>.chooseLanguage{
