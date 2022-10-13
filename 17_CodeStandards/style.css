@@ -1,0 +1,55 @@
+.box {
+    background-color: #567895;
+}
+
+h2 {
+    background-color: black;
+    color: white;
+}
+
+.box {
+    background-color: red;
+    /* fallback for older browsers that don't support gradients */
+    background-image: linear-gradient(to right, #ff0000, #aa0000);
+}
+
+/* || GENERAL STYLES */
+
+body {}
+
+h1,
+h2,
+h3,
+h4 {}
+
+ul {}
+
+blockquote {}
+
+/* || UTILITIES */
+
+.nobullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* || SITEWIDE */
+
+.main-nav {}
+
+.logo {}
+
+/* || STORE PAGES */
+
+.product-listing {}
+
+.product-box {}
+
+article.main p.box {
+    border: 1px solid #ccc;
+}
+
+.box {
+    border: 1px solid #ccc;
+}
