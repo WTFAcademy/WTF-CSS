@@ -45,7 +45,7 @@ body {
 
 ![头部样式](./img/19-2.jpg)
 
-头部的内容比较少，我们可以用定位来解决，方法与上一讲[UniswapHTML&CSS](https://github.com/AmazingAng/WTF-CSS/tree/main/18_UniswapHTML%26CSS)类似，这里就不再赘述。不要忘记修改`bayc-logo`的`z-index`>=1，这样才能让它处于`video`的上方。
+头部的内容比较少，我们可以用定位来解决，方法与上一讲[UniswapHTML&CSS](https://github.com/WTFAcademy/WTF-CSS/tree/main/18_UniswapHTML%26CSS)类似，这里就不再赘述。不要忘记修改`bayc-logo`的`z-index`>=1，这样才能让它处于`video`的上方。
 
 ```css
 .header {
