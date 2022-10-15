@@ -29,9 +29,6 @@ CSS 中组成一个块级盒子需要：
 
 ![](./img/4-1.png)
 
-
-
-
 ## 标准盒模型
 
 在标准模型中，如果你给盒设置 width 和 height，实际设置的是 content box。padding 和 border 再加上设置的宽高一起决定整个盒子的大小。见下图。
@@ -39,13 +36,8 @@ CSS 中组成一个块级盒子需要：
 假设定义了 width, height, margin, border, and padding:
 
 ```html
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 25px;
-  padding: 25px;
-  border: 5px solid black;
-}
+.box { width: 350px; height: 150px; margin: 25px; padding: 25px; border: 5px
+solid black; }
 ```
 
 如果使用标准模型宽度 = 410px (350 + 25 + 25 + 5 + 5)，高度 = 210px (150 + 25 + 25 + 5 + 5)，padding 加 border 再加 content box。
@@ -53,6 +45,7 @@ CSS 中组成一个块级盒子需要：
 ![](./img/4-2.png)
 
 > 备注：
+>
 > margin 不计入实际大小 —— 当然，它会影响盒子在页面所占空间，但是影响的是盒子外部空间。盒子的范围到边框为止 —— 不会延伸到 margin。
 
 ## 替代（IE）盒模型
@@ -61,37 +54,23 @@ CSS 中组成一个块级盒子需要：
 
 ![](./img/4-3.png)
 
-也就是说在替代（IE）盒模型下，你设置 `width` 属性，已经包含了 `padding` 和 `border` 的大小。
+也就是说在替代（IE）盒模型下，你设置 `width` 属性，已经不仅仅是 `content` 的宽度，还包含了 `padding` 和 `border` 的大小。
 
-## box-sizing
+## 改变盒模型
 
 默认浏览器会使用标准模型。如果需要使用替代模型，您可以通过为其设置 box-sizing: border-box 来实现。这样就可以告诉浏览器使用 border-box 来定义区域，从而设定您想要的大小。
 
 ```html
-.box {
-  box-sizing: border-box;
-}
+.box { box-sizing: border-box; }
 ```
 
 如果你希望所有元素都使用替代模式，而且确实很常用，设置 box-sizing 在 <html> 元素上，然后设置所有元素继承该属性，正如下面的例子。
 
 ```html
-html {
-  box-sizing: border-box;
-}
-
-// 使所有元素继承该属性
-*, *::before, *::after {
-  box-sizing: inherit;
-}
+html { box-sizing: border-box; } // 使所有元素继承该属性 *, *::before, *::after
+{ box-sizing: inherit; }
 ```
-
 
 ## 总结
 
 这就是你需要了解的关于盒模型的大部分内容。如果以后你发现对于盒模型的布局仍有困惑，你将会回来温故这些内容。
-
-
-
-
-
