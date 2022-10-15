@@ -11,11 +11,11 @@ WTF CSS教程，总结/搬运自MDN CSS教程，帮助新人快速入门CSS，�
 
 **第1讲：Hello CSS**
 
-**第2讲：CSS语法**（包括嵌入文件的3种方法）
+**第2讲：CSS语法** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/02_Syntax)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/02_Syntax/readme.md)】
 
-**第3讲：选择器** （样式化HTML元素，改变默认行为，类名，位置，状态）
+**第3讲：选择器** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/03_Selectors)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/03_Selectors/readme.md)】
 
-**第4讲：盒模型** 
+**第4讲：盒模型** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/04_BoxModel)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/04_BoxModel/readme.md)】
 
 **第5讲：背景与边框** 
 
