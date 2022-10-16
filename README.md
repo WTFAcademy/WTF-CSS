@@ -17,11 +17,11 @@ WTF CSS教程，总结/搬运自MDN CSS教程，帮助新人快速入门CSS，�
 
 **第4讲：盒模型** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/04_BoxModel)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/04_BoxModel/readme.md)】
 
-**第5讲：背景与边框** 
+**第5讲：背景与边框** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/05_Background&Borders)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/05_Background&Borders/readme.md)】
 
-**第6讲：文本与溢出**
+**第6讲：文本与溢出**【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/06_Text&Overflow)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/06_Text&Overflow/readme.md)】
 
-**第7讲：值，单位，与大小**
+**第7讲：值，单位，与大小** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/07_Value&Unit&Size)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/07_Value&Unit&Size/readme.md)】
 
 **第8讲：处理特殊元素** （图像、媒体、表单、表格）
 
