@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Layout</title>
+  <style>
+    .box {
+      margin: 10px;
+      padding: 10px;
+      border: 3px solid blue;
+    }
+
+    .wrapper {
+      font-size: 1em;
+    }
+
+    .px {
+      width: 200px;
+    }
+
+    .vw {
+      width: 10vw;
+    }
+
+    .em {
+      width: 10em;
+    }
+
+    .image {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      border: 3px solid blue;
+      background-image: url(./img/wtflogo.png);
+    }
+
+    .gradient {
+      width: 200px;
+      height: 30px;
+      margin: 10px;
+      border: 3px solid blue;
+      background-image: linear-gradient(90deg, rgba(119,0,255,1) 39%, rgba(0,212,255,1) 100%);
+    }
+
+    .position {
+      height: 300px;
+      width: 400px;
+      border: 3px solid blue;
+      background-image: url(./img/wtflogo.png);
+      background-repeat: no-repeat;
+      background-position: right 40px;
+    }
+
+    .max-width {
+      max-width: 100px;
+      background-color: orange;
+    }
+
+    .viewport {
+      border: 5px solid darkblue;
+      width: 50vw;
+      height: 20vh;
+      font-size: 10vh;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>视窗比例单位</h2>
+  <div class="wrapper">
+    <div class="box px">I am 200px wide</div>
+    <div class="box vw">I am 10vw wide</div>
+    <div class="box em">I am 10em wide</div>
+  </div>
+
+  <h2>图片</h2>
+  <div class="image"></div>
+  <div class="gradient"></div>  
+
+  <h2>位置</h2>
+  <div class="position"></div>
+
+  <h2>调整尺寸</h2>
+  <p class="max-width">
+    max-width为100px，最大宽度不超过100px
+  </p>
+
+  <h2>视口单位</h2>
+  <div class="viewport">
+    wtf-CSS
+  </div>
+</body>
+
+</html>

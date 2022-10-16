@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<head>
+  <title>Layout</title>
+  <style>
+    .wrapper {
+      margin-top: 10px;
+    }
+    
+    .wrapper div {
+      border-radius: 5px;
+      margin: 10px;
+      padding: 1em;
+
+    }
+
+    .bgc > div {
+      width: 11em;
+      color: #fff;
+    }
+
+    .bgc1 {
+      background-color: #000;
+    }
+    .bgc2 {
+      background-color: rgb(255, 0, 0);
+    }
+    .bgc3 {
+      background-color: green;
+    }
+
+    .bgr > div {
+      width: 50em;
+      height: 10em;
+      border: 2px solid #000;
+      background-image: url(./img/wtflogo.png);
+    }
+
+    .bgr1 {
+      background-repeat: no-repeat;
+    }
+
+    .bgr2 {
+      background-repeat: repeat-x;
+    }
+
+    .bgr3 {
+      background-repeat: repeat-y;
+    }
+
+    .bgr4 {
+      background-repeat: repeat;
+    }
+
+    .bgs > div {
+      width: 50em;
+      height: 30em;
+      border: 2px solid #000;
+      background-image: url(./img/balloons.jpeg);
+    }
+
+    .bgs1 {
+      background-size: auto;
+    }
+
+    .bgs2 {
+      background-size: cover;
+    }
+
+    .bgs3 {
+      background-size: contain;
+    }
+
+    .bgp > div {
+      width: 30em;
+      height: 10em;
+      border: 2px solid #000;
+      background-image: url(./img/wtflogo.png);
+      background-repeat: no-repeat;
+    }
+
+    .bgp1 {
+      background-position: top center;
+    }
+
+    .bgp2 {
+      background-position: 20px 10%;
+    }
+
+    .bgp3 {
+      background-position: top 20px;
+    }
+
+
+    .bga > div {
+      width: 30em;
+      height: 10em;
+      border: 2px solid #000;
+      background-image: url(./img/wtflogo.png);
+      /* background-repeat: repeat-y; */
+      overflow: scroll;
+    }
+
+    .bga1 {
+      background-attachment: scroll;
+    }
+
+    .bga2 {
+      background-attachment: fixed;
+    }
+
+    .bga3 {
+      background-attachment: local;
+    }
+
+    .content {
+      height: 100em;
+      font-size: 25px;
+      color: #fff;
+
+
+    }
+
+    .bgi {
+      width: 11em;
+      height: 4em;
+      border: 2px solid #000;
+      background-image: url(./img/wtflogo.png);
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>背景颜色background-color</h2>
+    <div class="bgc">
+      <div class="bgc1">#fff</div>
+      <div class="bgc2">rgb(255, 0, 0)</div>
+      <div class="bgc3">green</div>
+    </div>
+
+
+    <h2>背景图像background-image</h2>
+    <div class="bgi">wtf-css</div>
+
+    <h2>背景平铺background-repeat</h2>
+    <div class="bgr">
+      <h3>no-repeat</h3>
+      <div class="bgr1">wtf-css</div>
+      <h3>repeat-x</h3>
+      <div class="bgr2">wtf-css</div>
+      <h3>repeat-y</h3>
+      <div class="bgr3">wtf-css</div>
+      <h3>repeat</h3>
+      <div class="bgr4">wtf-css</div>
+    </div>
+
+    <h2>背景大小background-size</h2>
+    <div class="bgs">
+      <h3>auto</h3>
+      <div class="bgs1">wtf-css</div>
+      <h3>cover</h3>
+      <div class="bgs2">wtf-css</div>
+      <h3>contain</h3>
+      <div class="bgs3">wtf-css</div>
+    </div>
+
+    <h2>背景定位background-position</h2>
+    <div class="bgp">
+      <h3>top center</h3>
+      <div class="bgp1">wtf-css</div>
+      <h3>20px 10%</h3>
+      <div class="bgp2">wtf-css</div>
+      <h3>top 20px</h3>
+      <div class="bgp3">wtf-css</div>
+    </div>
+
+
+
+    <div class="bga">
+      <h2>background-attachment: scroll</h2>
+      <div class="bga1">
+        <div class="content">
+          content
+        </div>
+      </div>
+  
+      <h2>background-attachment: fixed</h2>
+      <div class="bga2">
+        <div class="content">
+          content
+        </div>
+      </div>
+      <h2>background-attachment: local</h2>
+      <div class="bga3">
+        <div class="content">
+          content
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
