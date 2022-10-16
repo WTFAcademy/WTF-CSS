@@ -35,7 +35,7 @@ WTF CSS教程，总结/搬运自MDN CSS教程，帮助新人快速入门CSS，�
 
 **第13讲：响应式设计** （媒体查询）【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/13_ResponsiveDesign)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/13_ResponsiveDesign/readme.md)】
 
-**第14讲：动画与过渡**
+**第14讲：动画与过渡** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/14_Transitions)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/14_Transitions/readme.md)】
 
 **第15讲：预处理器** （变量）
 

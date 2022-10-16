@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions</title>
+    <style>
+      .example {
+        margin: 20px;
+        border: 1px solid;
+        padding: 10px;
+        min-height: 140px;
+      }
+      .example1 .box {
+        border-style: solid;
+        border-width: 1px;
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: #0000ff;
+        -webkit-transition: width 2s, height 2s, background-color 2s,
+          -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 2s, transform 2s;
+      }
+      .example1 .box:hover {
+        background-color: #ffcccc;
+        width: 200px;
+        height: 200px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+      .example2 .delay1 {
+        position: relative;
+        transition-property: font-size;
+        transition-duration: 4s;
+        transition-delay: 2s;
+        font-size: 14px;
+      }
+
+      .example2 .delay1:hover {
+        transition-property: font-size;
+        transition-duration: 4s;
+        transition-delay: 2s;
+        font-size: 36px;
+      }
+      .menuButton {
+        position: relative;
+        transition-property: background-color, color;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+        text-align: left;
+        background-color: grey;
+        left: 5px;
+        top: 5px;
+        height: 26px;
+        color: white;
+        border-color: black;
+        font-family: sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        box-shadow: 2px 2px 1px black;
+        padding: 2px 4px;
+        border: solid 1px black;
+      }
+
+      .menuButton:hover {
+        position: relative;
+        transition-property: background-color, color;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+        background-color: white;
+        color: black;
+        box-shadow: 2px 2px 1px black;
+      }
+
+      #foo {
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        background: #c00;
+        position: absolute;
+        top: 700px;
+        left: 40px;
+        transition: all 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example example1">
+      <div class="box"></div>
+    </div>
+    <div class="example example2">
+      <div class="delay1">WTF-CSS</div>
+    </div>
+    <div class="example example3">
+      <div class="sidebar">
+        <p><a class="menuButton" href="home">WTF-HTML</a></p>
+        <p><a class="menuButton" href="about">WTF-CSS</a></p>
+        <p><a class="menuButton" href="contact">WTF-Solidity</a></p>
+        <p><a class="menuButton" href="links">WTF-Ethers</a></p>
+      </div>
+    </div>
+    <div class="example example4">
+      <p>随便点击某处来移动球</p>
+      <div id="foo"></div>
+    </div>
+    <script>
+      var f = document.getElementById("foo");
+      document.addEventListener(
+        "click",
+        function (ev) {
+          f.style.left = ev.clientX - 25 + "px";
+          f.style.top = ev.clientY - 25 + "px";
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
