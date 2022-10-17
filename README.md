@@ -45,7 +45,7 @@ WTF CSS教程，总结/搬运自MDN CSS教程，帮助新人快速入门CSS，�
 
 **第18讲：Uniswap页面** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/18_Uniswap_HTML_CSS)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/18_Uniswap_HTML_CSS/readme.md)】
 
-**第18讲：BAYC铸造页面** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/19_BAYC_HTML_CSS)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/19_BAYC_HTML_CSS/readme.md)】
+**第19讲：BAYC铸造页面** 【[代码](https://github.com/WTFAcademy/WTF-CSS/blob/main/19_BAYC_HTML_CSS)】 【[教程](https://github.com/WTFAcademy/WTF-CSS/blob/main/19_BAYC_HTML_CSS/readme.md)】
 
 ## 资源
 
