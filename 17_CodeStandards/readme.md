@@ -1,4 +1,4 @@
-# WTF CSS极简教程: 17.代码规范
+# WTF CSS极简教程: 17. 代码规范
 
 WTF CSS教程，总结/搬运自[MDN CSS教程](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)，帮助新人快速入门CSS。
 

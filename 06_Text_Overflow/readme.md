@@ -1,4 +1,4 @@
-# WTF CSS极简教程: 6.文本方向和内容溢出
+# WTF CSS极简教程: 6. 文本方向和内容溢出
 
 WTF CSS教程，总结/搬运自[MDN CSS教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，帮助新人快速入门CSS。
 

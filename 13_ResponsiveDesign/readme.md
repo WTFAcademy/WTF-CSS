@@ -1,4 +1,4 @@
-# WTF CSS 极简教程: 13.响应式设计
+# WTF CSS 极简教程: 13. 响应式设计
 
 WTF CSS 教程，总结/搬运自[MDN CSS 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，帮助新人快速入门 CSS。
 

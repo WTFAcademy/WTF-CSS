@@ -1,4 +1,4 @@
-# WTF CSS极简教程: 19.BAYCHTML&CSS
+# WTF CSS极简教程: 19. BAYC页面
 
 WTF CSS教程，总结/搬运自[MDN CSS教程](https://developer.mozilla.org/zh-CN/docs/Learn/CSS)，帮助新人快速入门CSS。
 

@@ -1,4 +1,4 @@
-# WTF CSS极简教程: 16.开发者工具
+# WTF CSS极简教程: 16. 开发者工具
 
 WTF CSS教程，总结/搬运自MDN CSS教程[开发者工具](https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)和[调试CSS](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)，帮助新人快速入门CSS。
 
