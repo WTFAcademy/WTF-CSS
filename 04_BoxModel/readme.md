@@ -60,15 +60,21 @@ solid black; }
 
 默认浏览器会使用标准模型。如果需要使用替代模型，您可以通过为其设置 box-sizing: border-box 来实现。这样就可以告诉浏览器使用 border-box 来定义区域，从而设定您想要的大小。
 
-```html
-.box { box-sizing: border-box; }
+```css
+.box {
+  box-sizing: border-box;
+}
 ```
 
 如果你希望所有元素都使用替代模式，而且确实很常用，设置 box-sizing 在 <html> 元素上，然后设置所有元素继承该属性，正如下面的例子。
 
-```html
-html { box-sizing: border-box; } // 使所有元素继承该属性 *, *::before, *::after
-{ box-sizing: inherit; }
+```css
+html {
+  box-sizing: border-box;
+} // 使所有元素继承该属性 *, *::before, *::after
+ {
+  box-sizing: inherit;
+}
 ```
 
 ## 外边距（margin）与 内边距（padding）
@@ -94,26 +100,13 @@ margin 属性为给定元素设置所有四个（上下左右）方向的外边�
 #### 语法：
 
 ```html
-/* 应用于所有边 */
-margin: 1em;
-margin: -3px;
-
-/* 上边下边 | 左边右边 */
-margin: 5% auto;
-
-/* 上边 | 左边右边 | 下边 */
-margin: 1em auto 2em;
-
-/* 上边 | 右边 | 下边 | 左边 */
-margin: 2px 1em 0 auto;
-
-/* 全局值 */
-margin: inherit;
-margin: initial;
-margin: unset;
+/* 应用于所有边 */ margin: 1em; margin: -3px; /* 上边下边 | 左边右边 */ margin:
+5% auto; /* 上边 | 左边右边 | 下边 */ margin: 1em auto 2em; /* 上边 | 右边 |
+下边 | 左边 */ margin: 2px 1em 0 auto; /* 全局值 */ margin: inherit; margin:
+initial; margin: unset;
 ```
 
-margin 属性接受 1~4个值 。每个值可以是 `<length>`，`<percentage>`，或 `auto`。取值为负时元素会比原来更接近临近元素。
+margin 属性接受 1~4 个值 。每个值可以是 `<length>`，`<percentage>`，或 `auto`。取值为负时元素会比原来更接近临近元素。
 
 - 当只指定一个值时，该值会统一应用到全部四个边的外边距上。
 - 指定两个值时，第一个值会应用于上边和下边的外边距，第二个值应用于左边和右边。
@@ -158,12 +151,11 @@ CSS
 
 理解外边距的一个关键是外边距折叠的概念。如果你有两个外边距相接的元素，这些外边距将合并为一个外边距，即最大的单个外边距的大小。
 
-在下面的例子中，我们有两个段落。顶部段落的页 margin-bottom为 50px。第二段的margin-top 为 30px。因为外边距折叠的概念，所以框之间的实际外边距是 50px，而不是两个外边距的总和。如下图：
+在下面的例子中，我们有两个段落。顶部段落的页 margin-bottom 为 50px。第二段的 margin-top 为 30px。因为外边距折叠的概念，所以框之间的实际外边距是 50px，而不是两个外边距的总和。如下图：
 
 ![](./img/4-3.png)
 
 有许多规则规定了什么时候外边距会折叠，什么时候不会折叠。相关更多信息，请参阅[外边距重叠](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)。现在首先要记住的事情是，外边距会折叠这个事情。如果你用外边距创建空间而没有得到你想要的效果，那这可能就是这个原因。
-
 
 更多[`margin`用法](https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin)。
 
@@ -171,7 +163,7 @@ CSS
 
 内边距位于边框和内容区域之间。与外边距不同，您不能有负数量的内边距，所以值必须是 0 或正的值。应用于元素的任何背景都将显示在内边距后面，内边距通常用于将内容推离边框。
 
-我们可以使用padding简写属性控制元素所有边，或者每边单独使用等价的普通属性：
+我们可以使用 padding 简写属性控制元素所有边，或者每边单独使用等价的普通属性：
 
 - padding-top
 - padding-right
@@ -181,23 +173,12 @@ CSS
 #### 语法
 
 ```html
-/* 应用于所有边 */
-padding: 1em;
-
-/* 上边下边 | 左边右边 */
-padding: 5% 10%;
-
-/* 上边 | 左边右边 | 下边 */
-padding: 1em 2em 2em;
-
-/* 上边 | 右边 | 下边 | 左边 */
-padding: 5px 1em 0 2em;
-
-/* 全局值 */
-padding: inherit;
-padding: initial;
+/* 应用于所有边 */ padding: 1em; /* 上边下边 | 左边右边 */ padding: 5% 10%; /*
+上边 | 左边右边 | 下边 */ padding: 1em 2em 2em; /* 上边 | 右边 | 下边 | 左边 */
+padding: 5px 1em 0 2em; /* 全局值 */ padding: inherit; padding: initial;
 padding: unset;
 ```
+
 padding 属性接受 1~4 个值。每个值可以是 `<length>` 或 `<percentage>`。取值不能为负。
 
 - 当只指定一个值时，该值会统一应用到全部四个边的内边距上。
@@ -206,6 +187,7 @@ padding 属性接受 1~4 个值。每个值可以是 `<length>` 或 `<percentage
 - 指定四个值时，依次（顺时针方向）作为上边，右边，下边，和左边的内边距。
 
 #### 可取值
+
 - `length` 以固定值为内边距。
 - `percentage` 相对于包含块的宽度，以百分比值为内边距。
 
@@ -215,7 +197,7 @@ HTML
 
 ```html
 <h4>此元素有合适的内边距。</h4>
-<h3>此元素的内边距很  大！</h3>
+<h3>此元素的内边距很 大！</h3>
 ```
 
 CSS
