@@ -145,7 +145,7 @@ CSS
 }
 ```
 
-![](./img/4-2.png)
+![](./img/4-4.png)
 
 #### 外边距折叠问题
 
@@ -153,7 +153,7 @@ CSS
 
 在下面的例子中，我们有两个段落。顶部段落的页 margin-bottom 为 50px。第二段的 margin-top 为 30px。因为外边距折叠的概念，所以框之间的实际外边距是 50px，而不是两个外边距的总和。如下图：
 
-![](./img/4-3.png)
+![](./img/4-5.png)
 
 有许多规则规定了什么时候外边距会折叠，什么时候不会折叠。相关更多信息，请参阅[外边距重叠](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)。现在首先要记住的事情是，外边距会折叠这个事情。如果你用外边距创建空间而没有得到你想要的效果，那这可能就是这个原因。
 
