@@ -61,22 +61,21 @@ p {
 
 ```html
 <!DOCTYPE html>
-<html>
-    <style type="text/css">
-        p {
-            color: blue;
-            text-align: center;
-        }
-
-        p strong {
-            color: green;
-            background-color: #d0f0f6;
-            padding: 10px;
-        }
-    </style>
-    
+<html>    
     <head>
         <title>This is the head</title>
+        <style type="text/css">
+            p {
+                color: blue;
+                text-align: center;
+            }
+    
+            p strong {
+                color: green;
+                background-color: #d0f0f6;
+                padding: 10px;
+            }
+        </style>    
     </head>
     <body>
         <p>Hello <strong>CSS！</strong></p>
@@ -86,7 +85,7 @@ p {
 
 ![Hello CSS](./img/1-2.png)
 
-在 Hello CSS 中，我们利用内部样式表将 CSS 嵌入到 HTML 中：
+在 Hello CSS 中，我们利用内部样式表将 CSS 嵌入到 HTML 中（一般放在 `<head>` 元素中）：
 
 ```html
 <style type="text/css">
