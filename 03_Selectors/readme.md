@@ -44,6 +44,8 @@ CSS 选择器规定了 CSS 规则会被应用到哪些元素上。
 }
 ```
 
+![](./img/3-1.png)
+
 #### 元素选择器
 
 按照给定的元素名称，选择所有匹配的元素。
@@ -64,6 +66,8 @@ input {
 }
 ```
 
+![](./img/3-2.png)
+
 #### 类选择器
 
 ```html
@@ -71,7 +75,7 @@ input {
 <h1 class="one">Hello CSS</h1>
 
 // 我有两个类名，分别为："one" 与 "two"
-<h1 class="one two ">Hello CSS</h1>
+<div class="one two ">Hello CSS</div>
 ```
 
 我们可以给元素设置 `class` 属性，class 的值是一个以空格分隔的元素的类名（classes）列表，一个元素可以有多个类名。
@@ -89,6 +93,8 @@ input {
 }
 ```
 
+![](./img/3-3.png)
+
 #### ID 选择器
 
 ```html
@@ -96,7 +102,7 @@ input {
 <h1 id="one">Hello CSS</h1>
 
 // 我的 ID 为 "two"
-<h1 id="two">Hello CSS</h1>
+<span id="two">Hello CSS</span>
 ```
 
 按照 id 属性选择一个与之匹配的元素。需要注意的是，一个文档中，每个 ID 属性都应当是唯一的。id 选择器以 `#` 开头，后面跟 id 值。
@@ -117,6 +123,8 @@ input {
 }
 ```
 
+![](./img/3-4.png)
+
 #### 属性选择器
 
 按照给定的属性，选择所有匹配的元素。属性选择器，使用 `[ ]` 选取带有指定属性的元素。
@@ -126,11 +134,13 @@ input {
 示例：
 
 ```css
-/* 匹配 所有具有 autoplay 属性的元素 */
-[autoplay] {
+/* 匹配 所有具有 type="text" 属性的元素 */
+[type="text"] {
 
 }
 ```
+
+![](./img/3-5.png)
 
 ### 分组选择器
 
@@ -143,11 +153,13 @@ input {
 示例：
 
 ```css
-/* 同时匹配 <span> 元素和 <div> 元素。 */
+/* 同时匹配 <div> 元素和 <span> 元素。 */
 div, span {
 
 }
 ```
+
+![](./img/3-6.png)
 
 ### 组合器
 
@@ -166,6 +178,8 @@ div span {
 }
 ```
 
+![](./img/3-7.png)
+
 #### 直接子代组合器
 
 选择前一个元素的直接子代的节点。
@@ -180,6 +194,8 @@ ul > li {
 
 }
 ```
+
+![](./img/3-8.png)
 
 #### 一般兄弟组合器
 
@@ -196,6 +212,8 @@ p ~ span {
 }
 ```
 
+![](./img/3-9.png)
+
 #### 紧邻兄弟组合器
 
 选择相邻元素，即后一个元素紧跟在前一个之后，并且共享同一个父节点。
@@ -205,26 +223,13 @@ p ~ span {
 示例：
 
 ```css
-/* 匹配所有紧邻在 <h2> 元素后的 <p> 元素。 */
-h2 + p {
+/* 匹配所有紧邻在 <p> 元素后的 <span> 元素。 */
+p + span {
 
 }
 ```
 
-#### 列组合器
-
-选择属于某个表格行的节点。
-
-语法：`A || B`
-
-示例：
-
-```css
-/* 匹配所有 <col> 作用域内的 <td> 元素。 */
-col || td {
-
-}
-```
+![](./img/3-10.png)
 
 ### 伪选择器
 
@@ -235,11 +240,13 @@ CSS 伪类 是添加到选择器的关键字，指定要选择的元素的特殊
 示例：
 
 ```css
-/* 匹配所有曾被访问过的 <a> 元素。 */
-a:visited {
+/* 匹配选择具有焦点的 <input> 元素。 */
+input:focus {
 
 }
 ```
+
+![](./img/3-11.png)
 
 更多[伪类详解](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)
 
@@ -255,6 +262,8 @@ p::first-line {
 
 }
 ```
+
+![](./img/3-12.png)
 
 更多[伪元素详解](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements)
 
