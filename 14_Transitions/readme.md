@@ -61,6 +61,8 @@ auto 值常常较复杂，规范指出不要在它上动画。一些用户代理
 }
 ```
 
+![](./img/1.gif)
+
 ## 定义过渡
 
 CSS 过渡由简写属性 [transition](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition) 定义是最好的方式，可以避免属性值列表长度不一，节省调试时间。
@@ -166,6 +168,8 @@ div {
 }
 ```
 
+![](./img/2.gif)
+
 ## 高亮菜单过渡效果
 
 CSS 的一个常用地方是当鼠标悬停在菜单上时高亮此菜单，使用 transition 效果更佳。
@@ -213,6 +217,8 @@ CSS 的一个常用地方是当鼠标悬停在菜单上时高亮此菜单，使�
 }
 ```
 
+![](./img/3.gif)
+
 这个 CSS 设置了菜单的外观，在:hover 时，菜单里的元素的文字、颜色及背景色都发生了变化。
 
 ## transition 让 JavaScript 效果更平滑
@@ -256,6 +262,8 @@ p {
   transition: all 1s;
 }
 ```
+
+![](./img/4.gif)
 
 ## 总结
 
