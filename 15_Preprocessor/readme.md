@@ -50,6 +50,11 @@ a,
   color: #428bca;
 }
 ```
+编译前：
+![](./img/01.jpg)
+
+编译后：
+![](./img/01-2.jpg)
 ##### 上述例子中展示了 `Less` 变量的简单使用，在`Less`中变量也可以当做选择器、URL 和 @import 来使用
 
 ###### 选择器
@@ -71,6 +76,12 @@ a,
   margin: 0 auto;
 }
 ```
+编译前：
+![](./img/02.jpg)
+
+编译后：
+![](./img/02-1.jpg)
+
 ###### URL
 ```less
 // 定义
@@ -91,6 +102,7 @@ body {
 // 使用
 @import "@{themes}/tidal-wave.less";
 ```
+![](./img/03.jpg)
 
 ##### 使用另一个变量来定义变量的名称
 ```less
@@ -115,6 +127,8 @@ body {
   color: green;
 }
 ```
+![](./img/04.jpg)
+
 **注意**：此处 `@color` 定义在了 `.section {}` 内部，所以只可以在 `.section{} ` 内部使用，不可以在其外部使用，否则编译器会报错 `@color is undefined`。
 
 ### Stylus
@@ -144,6 +158,8 @@ body {
   font: 14px "Lucida Grande", Arial, sans-serif;
 }
 ```
+![](./img/05.jpg)
+
 也可以不直接定义变量，而是通过向上查找来确定属性值，例如：
 ```stylus
 #logo
@@ -167,6 +183,8 @@ body {
    margin-top: -(@height / 2)
 ```
 此处的 `@width` `@height` 则是直接使用了 `width: 150px` `height: 80px` 的定义
+
+![](./img/06.jpg)
 
 ##### 上述例子中使用变量都是基于变量有定义的前提下，`Stylus` 变量也可以指定回退变量
 ```stylus
@@ -214,6 +232,9 @@ nav {
   border: 1px solid #F90;
 }
 ```
+
+![](./img/07.jpg)
+![](./img/07-1.jpg)
 
 **注意**：在此处例子中， `$nav-color` 变量声明没有父级限制，则可以全局使用，而 `$width`是定义在了 `.nav{}` 中，所以只能在 `.nav{}`中使用，在`.nav{}`外部不可使用
 
