@@ -35,9 +35,14 @@ CSS 中组成一个块级盒子需要：
 
 假设定义了 width, height, margin, border, and padding:
 
-```html
-.box { width: 350px; height: 150px; margin: 25px; padding: 25px; border: 5px
-solid black; }
+```css
+.box {
+  width: 350px;
+  height: 150px;
+  margin: 25px;
+  padding: 25px;
+  border: 5px solid black;
+}
 ```
 
 如果使用标准模型宽度 = 410px (350 + 25 + 25 + 5 + 5)，高度 = 210px (150 + 25 + 25 + 5 + 5)，padding 加 border 再加 content box。
