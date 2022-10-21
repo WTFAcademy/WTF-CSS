@@ -132,7 +132,7 @@ div {
    ![1666367277743](./img/5-8.png)
 2. cover：图像拓展至覆盖整个区域，保持比例。图像可能无法完整展示，出现部分溢出的情况。
 
-   ![img](https://file+.vscode-resource.vscode-cdn.net/c%3A/code/web3/wtf/WTF-CSS/05_Background_Borders/img/5-3.png)
+   ![img](./img/5-3.png)
 3. contain：图像尽可能地缩放并保持宽高比例，使高度或宽度完全适应整个背景区域。缩放会导致背景可能出现部分空白区域，此时容器的空白区域会显示由background-color 设置的背景颜色。
    ![img](./img/5-4.png)
 
