@@ -1,5 +1,3 @@
-./img/5-3.png
-
 # WTF CSS极简教程: 5. 背景和边框
 
 WTF CSS教程，总结/搬运自[MDN CSS教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，帮助新人快速入门CSS。
@@ -85,7 +83,8 @@ div {
 
 [background-size](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size) ，它可以设置长度或百分比值，使背景的大小以适应被填充背景的元素尺寸，常用的属性值包含以下几个：
 
-+ 直接设置长度或百分比值
++ 指定长度或百分比值：按指定大小渲染
++ auto：以图像的比例缩放作为背景
 + cover：图像扩展至足够大，使其完全覆盖整个区域，同时保持其高宽比，图像某些部分可能无法显示在区域内
 + contain：图像扩展至最大尺寸，使其宽度与高度完全适应整个区域
 
@@ -128,9 +127,13 @@ div {
 0. 原始背景图片的完整展示
 
    ![img](./img/balloons.jpeg)
-1. cover：图像拓展至覆盖整个区域，保持比例。图像可能无法完整展示，出现部分溢出的情况。
-   ![img](./img/5-3.png)
-2. contain：图像尽可能地缩放并保持宽高比例，使高度或宽度完全适应整个背景区域。缩放会导致背景可能出现部分空白区域，此时容器的空白区域会显示由background-color 设置的背景颜色。
+1. auto：以图像的比例缩放作为背景，图像会重复平铺展示
+
+   ![1666367277743](./img/5-8.png)
+2. cover：图像拓展至覆盖整个区域，保持比例。图像可能无法完整展示，出现部分溢出的情况。
+
+   ![img](https://file+.vscode-resource.vscode-cdn.net/c%3A/code/web3/wtf/WTF-CSS/05_Background_Borders/img/5-3.png)
+3. contain：图像尽可能地缩放并保持宽高比例，使高度或宽度完全适应整个背景区域。缩放会导致背景可能出现部分空白区域，此时容器的空白区域会显示由background-color 设置的背景颜色。
    ![img](./img/5-4.png)
 
 ### 背景定位
