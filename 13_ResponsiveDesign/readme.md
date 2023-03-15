@@ -125,7 +125,7 @@ WTF CSS 教程，总结/搬运自[MDN CSS 教程](https://developer.mozilla.org/
 
 ```css
 img {
-  max-width: 100%:
+  max-width: 100%;
 }
 ```
 
