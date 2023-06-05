@@ -1,6 +1,6 @@
 # WTF CSS 极简教程: 4. 盒模型
 
-WTF CSS 教程，总结/搬运自[MDN CSS 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，帮助新人快速入门 CSS。
+WTF CSS 教程，帮助新人快速入门 CSS。
 
 **推特**：[@WTFAcademy_](https://twitter.com/WTFAcademy_) ｜ [@0xAA_Science](https://twitter.com/0xAA_Science)
 
@@ -12,99 +12,145 @@ WTF CSS 教程，总结/搬运自[MDN CSS 教程](https://developer.mozilla.org/
 
 这一讲，我们来介绍 CSS 盒模型。在 CSS 中，所有的元素都被一个个的“盒子（box）”包围着，理解这些“盒子”的基本原理，是我们使用 CSS 实现准确布局、处理元素排列的关键。
 
-## 什么是 CSS 盒模型？
+## CSS盒模型
 
-完整的 CSS 盒模型应用于块级盒子，内联盒子只使用盒模型中定义的部分内容。模型定义了盒的每个部分 —— margin, border, padding, and content —— 合在一起就可以创建我们在页面上看到的内容。为了增加一些额外的复杂性，有一个标准的和替代（IE）的盒模型。
-
-### 盒模型的各个部分
-
-CSS 中组成一个块级盒子需要：
-
-- Content box: 这个区域是用来显示内容，大小可以通过设置 width 和 height.
-- Padding box: 包围在内容区域外部的空白区域；大小通过 padding 相关属性设置。
-- Border box: 边框盒包裹内容和内边距。大小通过 border 相关属性设置。
-- Margin box: 这是最外面的区域，是盒子和其他元素之间的空白区域。大小通过 margin 相关属性设置。
-
-如下图：
+CSS盒模型是CSS布局的基础，它描述了元素所占空间的方式。一个盒模型包含四个主要部分，从内到外分别是：内容（Content）、内边距（Padding）、边框（Border）和外边距（Margin）。
 
 ![](./img/4-1.png)
 
-## 标准盒模型
 
-在标准模型中，如果你给盒设置 width 和 height，实际设置的是 content box。padding 和 border 再加上设置的宽高一起决定整个盒子的大小。见下图。
+### 内容 (Content)
 
-假设定义了 width, height, margin, border, and padding:
+内容区域就是页面上看到的实际内容，包括文本、图片等。我们可以通过 `width` 和 `height` 属性来设置内容区域的宽和高。
 
 ```css
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 25px;
-  padding: 25px;
-  border: 5px solid black;
+div {
+    width: 200px;
+    height: 100px;
 }
 ```
 
-如果使用标准模型宽度 = 410px (350 + 25 + 25 + 5 + 5)，高度 = 210px (150 + 25 + 25 + 5 + 5)，padding 加 border 再加 content box。
+### 内边距（Padding）
 
-![](./img/4-2.png)
-
-> 备注：
->
-> margin 不计入实际大小 —— 当然，它会影响盒子在页面所占空间，但是影响的是盒子外部空间。盒子的范围到边框为止 —— 不会延伸到 margin。
-
-## 替代（IE）盒模型
-
-你可能会认为盒子的大小还要加上边框和内边距，这样很麻烦，而且你的想法是对的 ! 因为这个原因，css 还有一个替代盒模型。使用这个模型，所有宽度都是可见宽度，所以内容宽度是该宽度减去边框和填充部分。使用上面相同的样式得到 (width = 350px, height = 150px)。如下图：
-
-![](./img/4-3.png)
-
-也就是说在替代（IE）盒模型下，你设置 `width` 属性，已经不仅仅是 `content` 的宽度，还包含了 `padding` 和 `border` 的大小。
-
-## 改变盒模型
-
-默认浏览器会使用标准模型。如果需要使用替代模型，您可以通过为其设置 box-sizing: border-box 来实现。这样就可以告诉浏览器使用 border-box 来定义区域，从而设定您想要的大小。
+内边距是内容区域到边框之间的空间。内边距是透明的，也就是说它不会被背景色或背景图片覆盖。我们可以使用 `padding` 属性来设置内边距。它的值必须大于等于0。
 
 ```css
-.box {
-  box-sizing: border-box;
+div {
+    padding: 10px; /* 上下左右的内边距都为10px */
 }
 ```
 
-如果你希望所有元素都使用替代模式，而且确实很常用，设置 box-sizing 在 <html> 元素上，然后设置所有元素继承该属性，正如下面的例子。
+你还可以分别设置上下左右的内边距：
 
 ```css
-html {
-  box-sizing: border-box;
-}
-
-/* 使所有元素继承该属性 */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+div {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
 }
 ```
 
-## 外边距（margin）与 内边距（padding）
+#### 语法
 
-你已经在上面的示例中看到了 margin、padding 和 border 属性。该示例中使用的是属性的简写，允许我们一次设置盒子的四个边。这些简写等价于分别控制盒子的不同边的普通写法。
+```css
+/* 应用于所有边 */
+padding: 1em;
 
-接下来，我们更详细地研究 `margin` 与 `padding` 属性。
-border 属性将在后面的章节中给大家介绍。
+/* 上边下边 | 左边右边 */
+padding: 5% 10%;
+
+/* 上边 | 左边右边 | 下边 */
+padding: 1em 2em 2em;
+
+/* 上边 | 右边 | 下边 | 左边 */
+padding: 5px 1em 0 2em;
+
+/* 全局值 */
+padding: inherit;
+padding: initial;
+padding: unset;
+```
+
+padding 属性接受 1~4 个值。每个值可以是 `<length>` 或 `<percentage>`。取值不能为负。
+
+- 当只指定一个值时，该值会统一应用到全部四个边的内边距上。
+- 指定两个值时，第一个值会应用于上边和下边的内边距，第二个值应用于左边和右边。
+- 指定三个值时，第一个值应用于上边，第二个值应用于右边和左边，第三个则应用于下边的内边距。
+- 指定四个值时，依次（顺时针方向）作为上边，右边，下边，和左边的内边距。
+
+#### 可取值
+
+- `length` 以固定值为内边距。
+- `percentage` 相对于包含块的宽度，以百分比值为内边距。
+
+#### 示例
+
+HTML
+
+```html
+<h4>此元素有合适的内边距。</h4>
+
+<h3>此元素的内边距很 大！</h3>
+```
+
+CSS
+
+```css
+h4 {
+  background-color: lime;
+  padding: 20px 50px;
+}
+
+h3 {
+  background-color: cyan;
+  padding: 110px 50px 50px 110px;
+}
+```
+
+![](./img/4-6.png)
+
+
+### 边框 (Border)
+
+边框包裹着内边距和内容区域。边框是可见的，我们可以设置其宽度、样式和颜色。使用 `border` 属性可以设置边框。
+
+```css
+div {
+    border-width: 1px; /* 边框宽度 */
+    border-style: solid; /* 边框样式 */
+    border-color: #000; /* 边框颜色 */
+}
+```
+
+也可以将这三个属性合并为一个 `border` 属性：
+
+```css
+div {
+    border: 1px solid #000;
+}
+```
 
 ### 外边距（margin）
 
-外边距是盒子周围一圈看不到的空间。它会把其他元素从盒子旁边推开。外边距属性值可以为正也可以为负。设置负值会导致和其他内容重叠。无论使用标准模型还是替代模型，外边距总是在计算可见部分后额外添加。
+外边距是边框到其他元素的距离。外边距是透明的。我们可以使用 `margin` 属性来设置外边距。
 
-margin 属性为给定元素设置所有四个（上下左右）方向的外边距属性。也就是 margin-top，margin-right，margin-bottom，和 margin-left 四个外边距属性设置的简写。
+```css
+div {
+    margin: 10px; /* 上下左右的外边距都为10px */
+}
+```
 
-我们可以使用 margin 属性一次控制一个元素的所有边距，或者每边单独使用等价的普通属性控制：
+你还可以分别设置上下左右的外边距：
 
-- margin-top
-- margin-right
-- margin-bottom
-- margin-left
+```css
+div {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+```
 
 #### 语法：
 
@@ -181,75 +227,47 @@ CSS
 
 更多[`margin`用法](https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin)。
 
-### 内边距（padding）
+## 标准盒模型和替代盒模型
 
-内边距位于边框和内容区域之间。与外边距不同，您不能有负数量的内边距，所以值必须是 0 或正的值。应用于元素的任何背景都将显示在内边距后面，内边距通常用于将内容推离边框。
+CSS盒模型是网页设计中的基础概念，用于定义和控制元素的大小和空间。然而，早期的Internet Explorer浏览器和现代的标准浏览器对于盒模型有不同的理解，这就导致了标准盒模型和IE盒模型的出现。
 
-我们可以使用 padding 简写属性控制元素所有边，或者每边单独使用等价的普通属性：
+### 标准盒模型
+在标准的CSS盒模型中，元素的`width`和`height`属性只包括内容(content)的宽度和高度，不包括边框(border)和内边距(padding)。
 
-- padding-top
-- padding-right
-- padding-bottom
-- padding-left
-
-#### 语法
+举个例子，如果你设置一个元素的`width`为350px，`padding`为25px，`border`为5px，那么这个元素在页面上占据的实际空间宽度为410px（350px的内容宽度 + 2 * 25px的左右内边距 + 2 * 5px的左右边框）。
 
 ```css
-/* 应用于所有边 */
-padding: 1em;
-
-/* 上边下边 | 左边右边 */
-padding: 5% 10%;
-
-/* 上边 | 左边右边 | 下边 */
-padding: 1em 2em 2em;
-
-/* 上边 | 右边 | 下边 | 左边 */
-padding: 5px 1em 0 2em;
-
-/* 全局值 */
-padding: inherit;
-padding: initial;
-padding: unset;
-```
-
-padding 属性接受 1~4 个值。每个值可以是 `<length>` 或 `<percentage>`。取值不能为负。
-
-- 当只指定一个值时，该值会统一应用到全部四个边的内边距上。
-- 指定两个值时，第一个值会应用于上边和下边的内边距，第二个值应用于左边和右边。
-- 指定三个值时，第一个值应用于上边，第二个值应用于右边和左边，第三个则应用于下边的内边距。
-- 指定四个值时，依次（顺时针方向）作为上边，右边，下边，和左边的内边距。
-
-#### 可取值
-
-- `length` 以固定值为内边距。
-- `percentage` 相对于包含块的宽度，以百分比值为内边距。
-
-#### 示例
-
-HTML
-
-```html
-<h4>此元素有合适的内边距。</h4>
-
-<h3>此元素的内边距很 大！</h3>
-```
-
-CSS
-
-```css
-h4 {
-  background-color: lime;
-  padding: 20px 50px;
-}
-
-h3 {
-  background-color: cyan;
-  padding: 110px 50px 50px 110px;
+div {
+  width: 350px;
+  height: 150px;
+  margin: 25px;
+  padding: 25px;
+  border: 5px solid black;
 }
 ```
 
-![](./img/4-6.png)
+![](./img/4-2.png)
+
+
+### 替代（IE）盒模型
+
+而在替代盒模型（也被称为IE盒模型或怪异盒模型）中，元素的`width`和`height`属性包括内容(content)、边框(border)和内边距(padding)。
+
+继续上面的例子，如果你在IE盒模型中设置一个元素的`width`为350px，`padding`为25px，`border`为5px，那么这个元素在页面上占据的实际空间宽度仍然是350px。这个宽度已经包括了内容、边框和内边距。
+
+![](./img/4-3.png)
+
+### 改变盒模型
+
+为了解决这种差异，并允许开发者自由选择使用哪种盒模型，CSS引入了`box-sizing`属性（默认浏览器会使用标准模型）。
+
+```css
+/* 使用标准盒模型 */
+box-sizing: content-box;
+
+/* 使用IE盒模型 */
+box-sizing: border-box;
+```
 
 ## 总结
 

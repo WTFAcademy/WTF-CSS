@@ -1,6 +1,6 @@
 # WTF CSS 极简教程: 1. Hello CSS
 
-WTF CSS 教程，总结/搬运自[MDN CSS 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，帮助新人快速入门 CSS。
+WTF CSS 教程，帮助新人快速入门 CSS。
 
 **推特**：[@WTFAcademy_](https://twitter.com/WTFAcademy_) ｜ [@0xAA_Science](https://twitter.com/0xAA_Science)
 
@@ -10,54 +10,41 @@ WTF CSS 教程，总结/搬运自[MDN CSS 教程](https://developer.mozilla.org/
 
 ---
 
-这一讲，我们介绍CSS基础，并写第一个HTML+CSS程序：Hello CSS。你也可以直接阅读[MDN CSS基础](https://developer.mozilla.org/zh-CN/docs/Learn/CSS)。
+这一讲，我们介绍CSS基础，并写第一个HTML+CSS程序：Hello CSS。
 
 ## 什么是 CSS ？
 
-层叠样式表（**C**ascading **S**tyle **S**heet，简称：CSS）是为网页添加样式的代码。本节将介绍 CSS 的基础知识，并解答类似问题：怎样将文本设置为黑色或红色？怎样将内容显示在屏幕的特定位置？怎样用背景图片或颜色来装饰网页？
+CSS（**C**ascading **S**tyle **S**heet，层叠样式表）是为网页添加样式的代码。简单来说，HTML 负责文档的结构，而 CSS 则负责文档的表现样式。通过使用CSS，我们可以控制页面的布局，调整元素的颜色和尺寸，添加背景图像和边框，创建动画效果等。
 
-## CSS 究竟什么来头？
+CSS 被提出的初衷是为了解决内容与表现形式分离的问题。在早期的网页设计中，HTML标签被用来定义文档的结构和样式，这让文档的内容与样式混杂在一起，导致了代码的冗余和维护困难。CSS 的出现，使得我们可以将结构（HTML）和样式（CSS）进行分离，使网页的内容与表现形式得以分离，极大地提高了网页的可维护性和可读性。
 
-和 HTML 类似，CSS 也不是真正的编程语言，甚至不是标记语言。它是一门样式表语言，这也就是说人们可以用它来选择性地为 HTML 元素添加样式。举个例子，如果你要将 HTML 页面里**所有**的段落元素 `<p>` 中的文本改成红色，可以这样写 CSS：
+## CSS 规则集
+
+在CSS中，样式规则由两个主要的部分构成：选择器，以及一对花括号内的声明块。
 
 ```css
-p {
-  color: red;
+selector {
+    property: value;
 }
 ```
 
-### “CSS 规则集”详解
+- **选择器**：用于指定CSS规则应用到哪些元素上。
+- **声明块**：包含在花括号（{}）中的一组CSS声明，每个声明由一个属性和一个值组成，属性和值之间用冒号（:）分隔，每个声明的末尾需要加上分号（;）。
 
-让我们来仔细看一看上述 CSS：
-
-![图解 CSS 声明](./img/1-1.png)
-
-整个结构称为 **规则集**（通常简称“规则”），各部分释义如下：
-
-- 选择器（**Selector**）：HTML 元素的名称位于规则集的开始。它选择了一个或多个需要添加样式的元素（在这个例子中就是 `p` 元素）。开发者要给不同元素添加样式只需要更改选择器。
-- 声明（**Declaration**）：一个单独的规则，如 `color: red;` 。指定添加样式元素的**属性**和**属性值**。
-- 属性（**Properties**）：改变 HTML 元素样式的途径。本例中 `color` 就是 `p` 元素的属性。CSS 中，由编写人员决定修改哪个属性以改变规则。
-- 属性的值（Property value）: 在属性的右边，冒号后面即**属性的值**，它从指定属性的众多外观中选择一个值，我们除了 `red` 之外还有很多属性值可以用于 `color` 。
-
-注意其他重要的语法：
-
-- 每个规则集（除了选择器的部分）都应该包含在成对的大括号里（`{}`）。
-- 在每个声明里要用冒号（`:`）将属性与属性值分隔开。
-- 在每个规则集里要用分号（`;`）将各个声明分隔开。
-
-如果要同时修改多个属性，只需要将它们用分号隔开，就像这样：
+例如：
 
 ```css
-p {
-  color: red;
-  width: 500px;
-  border: 1px solid black;
+h1 {
+    color: blue;
+    font-size: 24px;
 }
 ```
+
+这个CSS规则将应用到HTML文档中所有的h1元素上，使得这些h1元素的文字颜色为蓝色，字体大小为24像素。
 
 ## Hello CSS
 
-下面，我们要写第一个包含 CSS 的程序：Hello CSS，看看 CSS 如何给 HTML页面添加更多的样式。如果你对 HTML 不熟悉，可以阅读 [WTF HTML极简教程](https://github.com/WTFAcademy/WTF-HTML)。
+下面，我们要写第一个包含 CSS 的程序：Hello CSS，展示如何在HTML文档中使用CSS。如果你对 HTML 不熟悉，可以阅读 [WTF HTML极简教程](https://github.com/WTFAcademy/WTF-HTML)。
 
 ```html
 <!DOCTYPE html>
@@ -93,7 +80,7 @@ p {
 </style>
 ```
 
-我们将所有段落元素 `<p>` 中的字体颜色设为蓝色（`color` 属性），并且居中显示（`text-align` 属性）。
+我们将所有段落元素 `<p>` 中的字体颜色设为蓝色（`color`），并且居中显示（`text-align`）。
 
 ```css
 p {
@@ -102,7 +89,7 @@ p {
 }
 ```
 
-并且，我们将段落元素 `<p>` 中的加粗元素 `<strong>` 中的字体颜色设为绿色（`color` 属性），背景颜色设为浅蓝（`background-color` 属性），并且将内边距设为10像素（`padding` 属性）。
+并且，我们将段落元素 `<p>` 中的加粗元素 `<strong>` 中的字体颜色设为绿色（`color`），背景颜色设为浅蓝（`background-color`），并且将内边距设为10像素（`padding`）。
 
 ```css
 p strong {
@@ -114,4 +101,4 @@ p strong {
 
 ## 总结
 
-这一讲我们介绍了什么是 CSS，并且写了第一个包含 CSS 的程序：Hello CSS，下面我们会学习更多 CSS 的细节。
+这一讲我们介绍了什么是 CSS，并且写了第一个包含 CSS 的程序：Hello CSS。你可以阅读[MDN CSS基础](https://developer.mozilla.org/zh-CN/docs/Learn/CSS)学习CSS的更多细节。
