@@ -1,6 +1,6 @@
 # WTF CSS极简教程: 5. 背景和边框
 
-WTF CSS教程，总结/搬运自[MDN CSS教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，帮助新人快速入门CSS。
+WTF CSS教程，帮助新人快速入门CSS。
 
 **推特**：[@WTFAcademy_](https://twitter.com/WTFAcademy_)  ｜ [@0xAA_Science](https://twitter.com/0xAA_Science)
 
@@ -242,4 +242,4 @@ border由width、style、color三个属性组成，其中width表示边框宽度
 
 ## 总结
 
-这一讲我们介绍了背景和边框的常见属性和用法，要深入了解可以阅读文中相关链接文档。
+这一讲我们介绍了背景和边框的常见属性和用法，理解并熟练运用这些属性，可以帮助你创建出更丰富、更有趣的网页设计。

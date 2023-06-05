@@ -1,6 +1,6 @@
-# WTF CSS 极简教程: 12.Position 定位
+# WTF CSS 极简教程: 12. 定位定位
 
-WTF CSS 教程，总结/搬运自[MDN CSS 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，帮助新人快速入门 CSS。
+WTF CSS 教程，帮助新人快速入门 CSS。
 
 **推特**：[@WTFAcademy_](https://twitter.com/WTFAcademy_) ｜ [@0xAA_Science](https://twitter.com/0xAA_Science)
 
@@ -10,7 +10,7 @@ WTF CSS 教程，总结/搬运自[MDN CSS 教程](https://developer.mozilla.org/
 
 ---
 
-这一讲，我们介绍 position 布局，position 属性用于指定一个元素在文档中的定位方式。top，right，bottom 和 left 属性则决定了该元素的最终位置。
+这一讲，我们介绍定位（Position）布局，position 属性用于指定一个元素在文档中的定位方式。top，right，bottom 和 left 属性则决定了该元素的最终位置。
 
 ## 定位类型
 

@@ -1,6 +1,6 @@
 # WTF CSS极简教程: 9. 布局
 
-WTF CSS教程，总结/搬运自[MDN CSS教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，帮助新人快速入门CSS。
+WTF CSS教程，帮助新人快速入门CSS。
 
 **推特**：[@WTFAcademy_](https://twitter.com/WTFAcademy_)  ｜ [@0xAA_Science](https://twitter.com/0xAA_Science) 
 
@@ -12,7 +12,7 @@ WTF CSS教程，总结/搬运自[MDN CSS教程](https://developer.mozilla.org/zh
 
 这一讲，我们介绍 CSS 布局，涉及浮动和定位的传统布局方法，以及像 flexbox 这样的现代布局工具。每种技术都有它们的用途，各有优缺点，相互辅助。通过理解各个布局方法的设计理念，你能够找到构建你想要的网页需要的布局方案。
 
-## 正常布局流 (Normal flow)
+## 正常布局
 
 正常布局流 (normal flow) 是指在不对页面进行任何布局控制时，浏览器默认的 HTML 布局方式。让我们快速地看一个 HTML 的例子：
 
@@ -43,6 +43,83 @@ WTF CSS教程，总结/搬运自[MDN CSS教程](https://developer.mozilla.org/zh
 注意，HTML 元素完全按照源码中出现的先后次序显示——第一个段落、无序列表、第二个段落。
 
 出现在另一个元素下面的元素被描述为块元素，与出现在另一个元素旁边的内联元素不同，内联元素就像段落中的单个单词一样。
+
+## 浮动布局
+
+把一个元素“浮动”(float) 起来，会改变该元素本身和在正常布局流（normal flow）中跟随它的其他元素的行为。这一元素会浮动到左侧或右侧，并且从正常布局流 (normal flow) 中移除，这时候其他的周围内容就会在这个被设置浮动（[float](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)）的元素周围环绕。
+
+[float](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float) 属性有四个可能的值：
+
+- `left` — 将元素浮动到左侧。
+- `right` — 将元素浮动到右侧。
+- `none` — 默认值，不浮动。
+- `inherit` — 继承父元素的浮动属性。
+
+在下面这个例子当中，我们把一个 `<div>` 元素浮动到左侧，并且给了他一个右侧的margin，把文字推开。这给了我们文字环绕着这个 `<div>` 元素的效果，在现代网页设计当中，这是你唯一需要学会的事情。
+
+```html
+<h1>Simple float example</h1>
+
+<div class="box">Float</div>
+
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+```
+
+```css
+.box {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 30px;
+}
+```
+
+![](./img/9-5.png)
+
+## 定位布局
+
+定位（Position）是另一个重要的CSS布局工具，它可以控制元素在页面上的精确位置。`position`属性有五个值：`static`（默认），`relative`，`absolute`，`fixed`和`sticky`。
+
+- `static`：元素按照正常的文档流进行定位（即不进行特殊定位）。
+
+- `relative`：元素相对于其正常位置进行定位。
+
+```css
+div {
+    position: relative;
+    top: 20px; /* 向下移动20px */
+    left: 20px; /* 向右移动20px */
+}
+```
+
+- `absolute`：元素相对于最近的非static定位的祖先元素（而不是它在HTML中的父元素）进行定位。如果没有这样的元素，那么它将相对于`<html>`元素进行定位。
+
+```css
+div {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+```
+
+- `fixed`：元素相对于浏览器窗口进行定位，即使页面滚动，它也会停留在相同的位置。
+
+```css
+div {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+```
+
+- `sticky`：元素根据用户的滚动位置进行定位。它的行为就像`position:relative`与`position:fixed`的混合。
+
+```css
+div {
+    position: sticky;
+    top: 0;
+}
+```
 
 ## 弹性盒子
 
@@ -165,37 +242,6 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 
 深入了解 Grid 布局，请看 [Grid 布局](https://github.com/WTFAcademy/WTF-CSS/blob/main/11_Grid/readme.md) 章节。
 
-## 浮动
-
-把一个元素“浮动”(float) 起来，会改变该元素本身和在正常布局流（normal flow）中跟随它的其他元素的行为。这一元素会浮动到左侧或右侧，并且从正常布局流 (normal flow) 中移除，这时候其他的周围内容就会在这个被设置浮动（[float](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)）的元素周围环绕。
-
-[float](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float) 属性有四个可能的值：
-
-- `left` — 将元素浮动到左侧。
-- `right` — 将元素浮动到右侧。
-- `none` — 默认值，不浮动。
-- `inherit` — 继承父元素的浮动属性。
-
-在下面这个例子当中，我们把一个 `<div>` 元素浮动到左侧，并且给了他一个右侧的margin，把文字推开。这给了我们文字环绕着这个 `<div>` 元素的效果，在现代网页设计当中，这是你唯一需要学会的事情。
-
-```html
-<h1>Simple float example</h1>
-
-<div class="box">Float</div>
-
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
-```
-
-```css
-.box {
-  float: left;
-  width: 150px;
-  height: 150px;
-  margin-right: 30px;
-}
-```
-
-![](./img/9-5.png)
 
 ## 多列布局
 

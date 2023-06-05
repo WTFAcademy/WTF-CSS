@@ -1,6 +1,6 @@
 # WTF CSS 极简教程: 15. 预处理器
 
-WTF CSS 教程，总结/搬运自[MDN CSS 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，帮助新人快速入门 CSS。
+WTF CSS 教程，帮助新人快速入门 CSS。
 
 **推特**：[@WTFAcademy_](https://twitter.com/WTFAcademy_) ｜ [@0xAA_Science](https://twitter.com/0xAA_Science)
 
@@ -12,26 +12,22 @@ WTF CSS 教程，总结/搬运自[MDN CSS 教程](https://developer.mozilla.org/
 
 这一讲，我们介绍 CSS 预处理器，涉及行业常见预处理器 Less、Stylus、及Sass。本节我们只涉及预处理器变量部分。
 
-### 预处理器简介
+## 预处理器简介
 
 CSS 预处理器是一个能让你通过预处理器自己独有的语法来生成 CSS 的程序。市面上有很多 CSS 预处理器可供选择，且绝大多数 CSS 预处理器会增加一些原生 CSS 不具备的特性，例如代码混合，嵌套选择器，继承选择器等。这些特性让 CSS 的结构更加具有可读性且易于维护。
 
 要使用 CSS 预处理器，你必须在 web 服务中服务器安装 CSS 编译工具。编译工具会将各预处理器语言编译后输出成为浏览器可识别的标准CSS语言。
 
 
-### 变量简介
+## 变量简介
 预处理器对变量提供了支持，你可以把反复使用的 `css` 属性值定义为变量，然后通过变量名来引用它们，无需重复书写这一属性值。或者，对于仅使用过一 次的属性值，你可以赋予其一个易懂的变量名，让人一眼就知道这个属性值的用途。
 `Less` 通过 `@` 符号标识变量，`Stylus` 则通过 `font-size = 14px` 直接赋值的形式来表示一个变量，也可以使用 `$` 符号来标识一个变量， `Sass` 也是通过 `$` 来标识变量，下面我们来详细分析一下各个预处理器变量部分。
 
-### Less
+## Less
 
-#### Less 简介
+Less是一种可靠的、成熟的CSS预处理器。它支持变量、混合宏、嵌套规则、函数等特性。Less 可以运行在 Node 或浏览器端。 相关文档可前往 [Less官网](https://lesscss.org/) 进行查看。
 
-Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。
-
-Less 可以运行在 Node 或浏览器端。 相关文档可前往 [Less官网](https://lesscss.org/) 进行查看。
-
-#### Less 变量 ( Variables )
+### Less 变量 ( Variables )
 `Less` 通过 `@` 符号标识一个变量
 例如：
 ```less
@@ -55,9 +51,10 @@ a,
 
 编译后：
 ![](./img/01-2.jpg)
-##### 上述例子中展示了 `Less` 变量的简单使用，在`Less`中变量也可以当做选择器、URL 和 @import 来使用
 
-###### 选择器
+> 上述例子中展示了 `Less` 变量的简单使用，在`Less`中变量也可以当做选择器、URL 和 @import 来使用
+
+### 选择器
 ```less
 // 定义
 @my-selector: banner;
@@ -82,7 +79,7 @@ a,
 编译后：
 ![](./img/02-1.jpg)
 
-###### URL
+### URL
 ```less
 // 定义
 @images: "../img";
@@ -94,7 +91,7 @@ body {
 }
 ```
 
-###### @import 中使用
+### @import 中使用
 ```less
 // 定义
 @themes: "../../src/themes";
@@ -104,7 +101,7 @@ body {
 ```
 ![](./img/03.jpg)
 
-##### 使用另一个变量来定义变量的名称
+### 使用另一个变量来定义变量的名称
 ```less
 // 定义
 @primary:  green;
@@ -131,15 +128,11 @@ body {
 
 **注意**：此处 `@color` 定义在了 `.section {}` 内部，所以只可以在 `.section{} ` 内部使用，不可以在其外部使用，否则编译器会报错 `@color is undefined`。
 
-### Stylus
+## Stylus
 
-#### Stylus 简介
+Stylus是一种富有表现力、灵活的CSS预处理器。它的语法非常灵活，你可以选择使用缩进或者大括号、分号等。相关文档可前往 [Stylus官网](https://stylus-lang.com/) 进行查看。
 
-富于表现力、动态的、健壮的 CSS
-
-相关文档可前往 [Stylus官网](https://stylus-lang.com/) 进行查看。
-
-#### Stylus 变量 ( Variables )
+### Stylus 变量 ( Variables )
 我们可以将表达式赋值给变量，然后在整个样式表中使用变量，也可以使用 `$` 符号定义变量
 
 ```stylus
@@ -186,7 +179,7 @@ body {
 
 ![](./img/06.jpg)
 
-##### 上述例子中使用变量都是基于变量有定义的前提下，`Stylus` 变量也可以指定回退变量
+> 上述例子中使用变量都是基于变量有定义的前提下，`Stylus` 变量也可以指定回退变量
 ```stylus
 position()
     position: arguments
@@ -194,15 +187,12 @@ position()
 ```
 `@z-index` 编译的时候会“向上冒泡”查找堆栈直到被发现，如果最终查找失败，则会返回 1
 
-### Sass
+## Sass
 
-#### Sass 简介
 
-世界上最成熟、最稳定、最强大的专业级CSS扩展语言！
+Sass（Syntactically Awesome Stylesheets）是最早的CSS预处理器，也是最流行的预处理器之一。它支持两种语法：基于缩进的语法（.sass），以及类似于CSS的语法（.scss）。相关文档可前往 [Sass官网](https://sass-lang.com/) 进行查看。
 
-相关文档可前往 [Sass官网](https://sass-lang.com/) 进行查看。
-
-#### Sass 变量 ( Variables )
+### Sass 变量 ( Variables )
 Sass 中使用 `$` 来定义变量
 
 变量声明：
