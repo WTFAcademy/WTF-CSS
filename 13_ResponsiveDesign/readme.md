@@ -24,9 +24,9 @@ WTF CSS 教程，帮助新人快速入门 CSS。
 
 ## 媒介查询
 
-媒介查询允许我们运行一系列测试，例如用户的屏幕是否大于某个宽度或者某个分辨率，并将 CSS 选择性地适应用户的需要应用在样式化页面上。
+媒介查询允许我们运行一系列测试，例如用户的屏幕是否大于某个宽度或者某个分辨率，并将CSS选择性地适应用户的需要应用在样式化页面上。
 
-例如，下面的媒体查询进行测试，以知晓当前的 Web 页面是否被展示为屏幕媒体（也就是说不是印刷文档），且视口至少有 800 像素宽。用于.container 选择器的 CSS 将只会在这两件前提存在的情况下应用。
+例如，下面的媒体查询进行测试，以知晓当前的Web页面是否被展示为屏幕媒体（也就是说不是印刷文档），且视口至少有`800`像素宽。用于`.container`选择器的 CSS 将只会在这两件前提存在的情况下应用。
 
 ```css
 @media screen and (min-width: 800px) {
@@ -62,7 +62,7 @@ WTF CSS 教程，帮助新人快速入门 CSS。
 
 ![](./img/mdn-rwd-desktop.png)
 
-> 备注： 你可以在 GitHub 上找到此[示例](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)的实时示例和[源代码](https://github.com/mdn/css-examples/blob/main/learn/rwd/float-based-rwd.html)。
+> 备注：你可以在 GitHub 上找到此[示例](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)的实时示例和[源代码](https://github.com/mdn/css-examples/blob/main/learn/rwd/float-based-rwd.html)。
 
 ## 现代布局技术
 
@@ -70,7 +70,7 @@ WTF CSS 教程，帮助新人快速入门 CSS。
 
 ### 多个列
 
-这些布局方式中最老的一个是多个列，即当你指定一个 column-count 的时候，这意指你希望把你的内容分成多少列。浏览器之后会算出这些列的大小，这是一个随着屏幕尺寸变化的尺寸。
+这些布局方式中最老的一个是多个列，即当你指定一个`column-count`的时候，这意指你希望把你的内容分成多少列。浏览器之后会算出这些列的大小，这是一个随着屏幕尺寸变化的尺寸。
 
 ```css
 .container {
@@ -78,7 +78,7 @@ WTF CSS 教程，帮助新人快速入门 CSS。
 }
 ```
 
-如果你却去指定 `column-width` 的话，你是在指定一个最小宽度。浏览器会尽可能多数量地创建这一宽度的列，只要它们可以恰当地放进容器里面，然后将所有列之间的剩余空间共享出去。因而列的数量会随着空间的多少而改变。
+如果你却去指定`column-width` 话，你是在指定一个最小宽度。浏览器会尽可能多数量地创建这一宽度的列，只要它们可以恰当地放进容器里面，然后将所有列之间的剩余空间共享出去。因而列的数量会随着空间的多少而改变。
 
 ```css
 .container {
@@ -88,9 +88,9 @@ WTF CSS 教程，帮助新人快速入门 CSS。
 
 ### 伸缩盒
 
-在伸缩盒中，初始的行为是，弹性的物件将参照容器里面的空间的大小，缩小和分布物件之间的空间。通过更改 `flex-grow` 和 `flex-shrink`Ï 的值，你可以指示在物件遇到周围有更多或者更少的空间的情况下，你所期望的物件表现。
+在伸缩盒中，初始的行为是，弹性的物件将参照容器里面的空间的大小，缩小和分布物件之间的空间。通过更改`flex-grow`和`flex-shrink`的值，你可以指示在物件遇到周围有更多或者更少的空间的情况下，你所期望的物件表现。
 
-在下面的示例中，和布局专题的 [Flexbox: Flexible sizing of flex items](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items) 中所描述的那样，使用了 `flex: 1` 的简写，可伸缩物件每个将会占据一份可伸缩容器中相等大小的空间。
+在下面的示例中，和布局专题的[Flexbox: Flexible sizing of flex items](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items)中所描述的那样，使用了`flex: 1`的简写，可伸缩物件每个将会占据一份可伸缩容器中相等大小的空间。
 
 ```css
 .container {
@@ -102,11 +102,11 @@ WTF CSS 教程，帮助新人快速入门 CSS。
 }
 ```
 
-> 备注： 作为一个示例，我们已经重构了上面的简单响应式布局，这次我们用了伸缩盒。你可以看看我们是怎么样才不再需要使用奇怪的百分数值来计算列的尺寸的：[示例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[源代码](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html)。
+> 备注：作为一个示例，我们已经重构了上面的简单响应式布局，这次我们用了伸缩盒。你可以看看我们是怎么样才不再需要使用奇怪的百分数值来计算列的尺寸的：[示例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[源代码](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html)。
 
-### CSS 网格
+### CSS网格
 
-在 CSS 网格布局中，fr 单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着 3 个大小为 1fr 的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在 [Flexible grids with the fr unit](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit) 下的学习布局网格专题了解更多和这一方式相关的信息。
+在CSS网格布局中，`fr`单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着`3`个大小为`1fr`的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在 [Flexible grids with the fr unit](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit) 下的学习布局网格专题了解更多和这一方式相关的信息。
 
 ```css
 .container {
@@ -115,7 +115,7 @@ WTF CSS 教程，帮助新人快速入门 CSS。
 }
 ```
 
-> 备注： 网格布局版本的代码要更简单，因为我们可以在.wrapper 上定义列：[示例](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)，[源代码](https://github.com/mdn/css-examples/blob/main/learn/rwd/grid-based-rwd.html)。
+> 备注：网格布局版本的代码要更简单，因为我们可以在.wrapper 上定义列：[示例](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)，[源代码](https://github.com/mdn/css-examples/blob/main/learn/rwd/grid-based-rwd.html)。
 
 ![](./img/grid.png)
 
@@ -131,7 +131,7 @@ img {
 
 这种方式有显然的弊端。图像有可能会显示得比它的原始尺寸小很多，以至于浪费带宽——一个移动端用户会下载几倍于他们在浏览器窗口中实际看到的大小的图像。此外，你可能不想在移动端和桌面端有相同的图像宽高比例。
 
-响应式图像，使用了<[picture](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/picture)>元素和<[img](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img)> srcset 和 sizes 特性，解决了这两个问题。你可以提供附带着“提示”（描述图像最适合的屏幕尺寸和分辨率的元数据）的多种尺寸，浏览器将会选择对设备最合适的图像，以确保用户下载尺寸适合他们使用的设备的图像。
+响应式图像，使用了`<picture>`元素和`<img>`的`srcset`和`sizes`特性，解决了这两个问题。你可以提供附带着“提示”（描述图像最适合的屏幕尺寸和分辨率的元数据）的多种尺寸，浏览器将会选择对设备最合适的图像，以确保用户下载尺寸适合他们使用的设备的图像。
 
 ## 响应式排版
 
@@ -195,7 +195,7 @@ h1 {
 
 ## 视口元标签
 
-如果你看看一张响应式页面的 HTML 源代码，你通常将会在文档的<head>看到下面的<meta>标签。
+如果你看看一张响应式页面的 HTML 源代码，你通常将会在文档的`<head>`看到下面的`<meta>`标签。
 
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -205,16 +205,16 @@ h1 {
 
 和视口元标签一起，你可以使用另外几个设定，但大体说来，上面那行就是你想要使用的。
 
-- initial-scale：设定了页面的初始缩放，我们设定为 1。
-- height：特别为视口设定一个高度。
-- minimum-scale：设定最小缩放级别。
-- maximum-scale：设定最大缩放级别。
-- user-scalable：如果设为 no 的话阻止缩放。
+- `initial-scale`：设定了页面的初始缩放，我们设定为 1。
+- `height`：特别为视口设定一个高度。
+- `minimum-scale`：设定最小缩放级别。
+- `maximum-scale`：设定最大缩放级别。
+- `user-scalable`：如果设为 no 的话阻止缩放。
 
-你应该避免使用 minimum-scale、maximum-scale，尤其是将 user-scalable 设为 no。用户应该有权力尽可能大或小地进行缩放，阻止这种做法会引起访问性问题。
+你应该避免使用`minimum-scale`、`maximum-scale`，尤其是将 `user-scalable`设为`no`。用户应该有权力尽可能大或小地进行缩放，阻止这种做法会引起访问性问题。
 
-> 备注： 有一个 CSS @规则是被设计用来替换掉视口元标签的——[@viewport](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@viewport)——但是浏览器对它的支持太差了。它是在 IE 和 Edge 中引入的，但自从 Chromium 内核的 Edge 发布以后，它就不再受到 Edge 浏览器支持了。
+> 备注： CSS`@`规则是被设计用来替换掉视口元标签的——[`@viewport`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@viewport)——但是浏览器对它的支持太差了。它是在 IE 和 Edge 中引入的，但自从 Chromium 内核的 Edge 发布以后，它就不再受到 Edge 浏览器支持了。
 
 ## 小结
 
-本节我们学习了很多方法来实现网站页面的响应式设计，它涵盖了很多 CSS 和 HTML 的功能和技术，现在基本上就是我们默认建设网站的方式。
+本节我们学习了很多方法来实现网站页面的响应式设计，它涵盖了很多CSS和HTML的功能和技术，现在基本上就是我们默认建设网站的方式。
