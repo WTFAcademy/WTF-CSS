@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Special Element</title>
+  <style>
+    section {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    .img1 {
+      display: block;
+      width: 100%;
+      height: 1016px;
+    }
+
+    .img2 {
+      width: 200px;
+      height: 100px;
+    }
+
+    .img3 {
+      width: 200px;
+      height: 100px;
+      opacity: 0.5;
+    }
+
+    .img4 {
+      width: 200px;
+      height: 100px;
+      opacity: 0;
+    }
+
+    .img5 {
+      margin: 0 auto;
+      display: block;
+      width: 200px;
+      height: 100px;
+    }
+
+    .img6 {
+      display: block;
+      width: 200px;
+      height: 100px;
+      border-radius: 8px;
+    }
+
+    .img7 {
+      display: block;
+      width: 200px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .img8 {
+      display: block;
+      width: 200px;
+      height: 100px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+
+    .img-inline {
+      text-align: center;
+    }
+
+    .form-section {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    input[type=text],
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    textarea {
+      overflow: auto;
+    }
+
+    .input1 {
+      width: 100% !important;
+    }
+
+    .input2 {
+      width: 200px !important;
+    }
+
+    .input3 {
+      border: 2px solid red !important;
+    }
+
+    .input4 {
+      border-bottom: 2px solid red !important;
+    }
+
+    .input5 {
+      background-color: #3CBC8D;
+      border-color: #3CBC8D !important;
+      color: white;
+    }
+
+    .select1 {
+      padding: 16px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #f1f1f1;
+    }
+
+    .table1,
+    .table1 th,
+    .table1 td {
+      border: 1px solid black;
+    }
+
+    .table2 {
+      width: 100%;
+    }
+
+    .table2,
+    .table2 th,
+    .table2 td {
+      border: 1px solid black;
+    }
+
+    .table3 {
+      border-collapse: collapse;
+    }
+
+    .table3,
+    .table3 th,
+    .table3 td {
+      border: 1px solid black;
+    }
+
+    .table4 {
+      border: 1px solid black;
+    }
+
+    .table5 {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table5,
+    .table5 th,
+    .table5 td {
+      border: 1px solid black;
+    }
+
+    .table5 th,
+    .table5 td {
+      height: 50px;
+    }
+
+    .table6 {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table6,
+    .table6 th,
+    .table6 td {
+      border: 1px solid black;
+    }
+
+    .table6 th,
+    .table6 td {
+      height: 50px;
+      text-align: left;
+      vertical-align: bottom;
+    }
+
+    .table7 {
+      width: 100%;
+    }
+
+    .table7 th,
+    .table7 td {
+      border-bottom: 1px solid black;
+    }
+
+    .table7 tr:hover {
+      background-color: #3CBC8D;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <img src="./img/08-1.jpg" class="img1" alt="">
+  </section>
+
+  <section>
+     <img src="./img/08-2.jpg" class="img2" alt="">
+     <span>I am an inline image. After the image is set as an inline image, it can be arranged together with other inline elements. </span>
+   </section>
+
+   <section>
+     <img src="./img/08-2.jpg" class="img3" alt="">
+     <span>I am a semi-transparent image. </span>
+   </section>
+
+   <section>
+     <img src="./img/08-2.jpg" class="img4" alt="">
+     <span>I am a transparent picture. </span>
+   </section>
+
+   <section>
+     <img src="./img/08-2.jpg" class="img5" alt="">
+     <p style="text-align: center;">The picture is a block-level element, centered</p>
+   </section>
+
+   <section>
+     <div class="img-inline">
+       <img src="./img/08-2.jpg" class="img2" alt="">
+       <p>The picture is an inline element, centered</p>
+     </div>
+   </section>
+
+   <section>
+     <img src="./img/08-20.jpg" class="img6" alt="">
+     <p>I am a rounded image</p>
+   </section>
+
+   <section>
+     <img src="./img/08-20.jpg" class="img7" alt="">
+     <p>I am a round image</p>
+   </section>
+
+   <section>
+     <img src="./img/08-20.jpg" class="img8" alt="">
+     <p>I am a shadowed image</p>
+   </section>
+
+
+   <section class="form-section">
+     <form action="">
+       <label for="fname">nickname</label>
+       <input type="text" />
+
+       <label for="country">Technology stack</label>
+       <select>
+         <option value="1">Front end</option>
+         <option value="2">Contract</option>
+         <option value="3">Backend</option>
+         <option value="4">Product</option>
+         <option value="5">Design</option>
+       </select>
+
+       <label for="lname">Introduce yourself in one sentence</label>
+       <textarea placeholder="Introduce yourself in one sentence (I am textarea)"></textarea>
+
+
+       <input type="submit" value="Submit" />
+     </form>
+   </section>
+
+   <section>
+     <input type="text" value="I am 100%" class="input1">
+   </section>
+
+   <section>
+     <input type="text" value="I am 200px" class="input2">
+   </section>
+
+   <section>
+     <input type="text" value="I am a red input box" class="input3">
+   </section>
+
+   <section>
+     <input type="text" value="I am a red lower border input box" class="input4">
+   </section>
+
+   <section>
+     <input type="text" value="I am a color input box" class="input5">
+   </section>
+
+   <section>
+     <select class="select1">
+       <option value="1">Front end</option>
+       <option value="2">Contract</option>
+       <option value="3">Backend</option>
+       <option value="4">Product</option>
+       <option value="5">Design</option>
+     </select>
+    </section>
+
+   <section>
+     <table class="table1">
+       <tr>
+         <th>Firstname</th>
+         <th>Lastname</th>
+       </tr>
+
+       <tr>
+         <td>Bill</td>
+         <td>Gates</td>
+       </tr>
+
+       <tr>
+         <td>Steve</td>
+         <td>Jobs</td>
+       </tr>
+     </table>
+   </section>
+
+   <section>
+     <table class="table2">
+       <tr>
+         <th>Firstname</th>
+         <th>Lastname</th>
+       </tr>
+
+       <tr>
+         <td>Bill</td>
+         <td>Gates</td>
+       </tr>
+
+       <tr>
+         <td>Steve</td>
+         <td>Jobs</td>
+       </tr>
+     </table>
+   </section>
+
+   <section>
+     <table class="table3">
+       <tr>
+         <th>Firstname</th>
+         <th>Lastname</th>
+       </tr>
+
+       <tr>
+         <td>Bill</td>
+         <td>Gates</td>
+       </tr>
+
+       <tr>
+         <td>Steve</td>
+         <td>Jobs</td>
+       </tr>
+     </table>
+   </section>
+
+   <section>
+     <table class="table4">
+       <tr>
+         <th>Firstname</th>
+         <th>Lastname</th>
+       </tr>
+
+       <tr>
+         <td>Bill</td>
+         <td>Gates</td>
+       </tr>
+
+       <tr>
+         <td>Steve</td>
+         <td>Jobs</td>
+       </tr>
+     </table>
+   </section>
+
+   <section>
+     <table class="table5">
+       <tr>
+         <th>Firstname</th>
+         <th>Lastname</th>
+       </tr>
+
+       <tr>
+         <td>Bill</td>
+         <td>Gates</td>
+       </tr>
+
+       <tr>
+         <td>Steve</td>
+         <td>Jobs</td>
+       </tr>
+     </table>
+   </section>
+
+   <section>
+     <table class="table6">
+       <tr>
+         <th>Firstname</th>
+         <th>Lastname</th>
+       </tr>
+
+       <tr>
+         <td>Bill</td>
+         <td>Gates</td>
+       </tr>
+
+       <tr>
+         <td>Steve</td>
+         <td>Jobs</td>
+       </tr>
+     </table>
+   </section>
+
+   <section>
+     <table class="table7">
+       <tr>
+         <th>Firstname</th>
+         <th>Lastname</th>
+       </tr>
+
+       <tr>
+         <td>Bill</td>
+         <td>Gates</td>
+       </tr>
+
+       <tr>
+         <td>Steve</td>
+         <td>Jobs</td>
+       </tr>
+     </table>
+   </section>
+</body>
+
+</html>
+     
