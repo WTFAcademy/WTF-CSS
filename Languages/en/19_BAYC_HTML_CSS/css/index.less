@@ -1,0 +1,185 @@
+body {
+    background-color: black;
+}
+
+* {
+
+    color: white;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header {
+    &>img {
+        position: relative;
+        left: 50%;
+        margin-left: -150px;
+        padding-top: 24px;
+        margin-bottom: -40px;
+        width: 300px;
+        z-index: 1;
+    }
+
+    & a {
+        text-decoration: none;
+
+        &>img {
+            margin-left: 10px;
+            height: 16px;
+        }
+    }
+
+    &>.socialMedia {
+        position: absolute;
+        top: 50px;
+        right: 50%;
+        margin-right: -550px;
+    }
+}
+
+.body {
+    &>.welcome {
+        width: 1140px;
+        position: relative;
+        left: 50%;
+        margin-left: -570px;
+
+        & video {
+            width: 100%;
+        }
+
+        &>.mint {
+            background-color: black;
+            position: absolute;
+            bottom: 0px;
+            width: 380px;
+            height: 215px;
+
+            &>h1 {
+                width: 285px;
+                height: 98px;
+                font-size: 27px;
+            }
+
+            &>button {
+                width: 285px;
+                height: 52px;
+                font-size: 16px;
+                color: black;
+                background-color: #bfc500;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: white;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+
+    &>.description {
+        position: relative;
+        left: 50%;
+        margin-left: -570px;
+        width: 700px;
+        height: 48px;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+.footer {
+    &>.line {
+        margin: 0 auto;
+        width: 93%;
+        height: 2px;
+        background-color: white;
+    }
+
+    &>.info {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: 240px;
+        margin: 30px 96px;
+
+        &>.email {
+            width: 530px;
+            height: 62px;
+            margin: 69px 0;
+            padding: 0 15px;
+
+            &>.get-on-the-list {
+                font-size: 13px;
+            }
+
+            &>.getEmail {
+                width: 530px;
+                height: 28px;
+                padding-top: 10px;
+
+                &>input {
+                    width: 376px;
+                    height: 24px;
+                    padding: 2px 2px 2px 10px;
+                    box-sizing: border-box;
+                    background-color: #272626;
+                    color: white;
+                    border: none;
+                }
+
+                &>button {
+                    width: 36px;
+                    height: 24px;
+                    background-color: #4b4a4a;
+                    position: relative;
+                    top: 1px;
+                    left: -5px;
+                    border: none;
+                }
+            }
+        }
+
+        &>img {
+            width: 200px;
+            height: 200px;
+        }
+
+        &>.others {
+            width: 560px;
+            height: 184px;
+            padding: 20px 0;
+
+            & .socialMedia {
+                margin: 28px 0;
+
+                &>a {
+                    text-decoration: none;
+
+                    &>img {
+                        margin-left: 10px;
+                        height: 16px;
+                    }
+                }
+            }
+
+            & .copyright {
+                height: 24px;
+                font-size: 12px;
+            }
+
+            &>.a-wrapper {
+                height: 26px;
+
+                &>a {
+                    color: yellowgreen;
+                    font-size: 12px;
+                }
+            }
+
+        }
+    }
+}
