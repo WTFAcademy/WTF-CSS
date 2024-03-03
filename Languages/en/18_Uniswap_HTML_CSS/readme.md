@@ -32,38 +32,56 @@ Then we deal with the style of the header. Uniswap’s native style is like this
 
 ![Head style](./img/18-2.jpg)
 
-The arrangement of the head can be solved using positioning. The positioning of the left and right sub-elements is very simple, but if you want to center the middle element, in addition to `right=50%`, you must also make `margin-right: -140px` (`140px` is half the width of the middle element), Otherwise it will center the right side of it.
+The header is organized with flexbox, ensuring vertical alignment of its contents. For the image within the header, its width is set to 25 pixels, with a 5-pixel margin from the top to refine its positioning. Concerning the switch page, it is fashioned as a container with a white background and rounded corners (20px border-radius), fostering a sleek appearance. 
 
-`border-radius` should not be set to a percentage, because the width and height of the elements are different, just set it to half the line height.
+Employing flexbox, the switch links are uniformly spaced within the container using `justify-content: space-between`, ensuring consistent distribution. The container spans 30% of its parent's width and is horizontally centered using auto margins, with a top margin of 13 pixels to refine its vertical placement.
 
-The `display` of `a` is set to `inline-block`, so that its width can be adjusted.
-
-Setting `line-height` to `40px` can not only change the height of `a`, but also center the content vertically.
+Note that, the first link ("Exchange") has a distinct grey shade (#f7f8fa) to denote that the user is currently on that page. 
 
 ```css
 .header {
-     margin-top: 20px;
-     &>img {
-         width: 25px;
-     }
-     &>.switchPage {
-         position: absolute;
-         top: 20px;
-         right: 50%;
-         margin-right: -140px;
-         background-color: white;
-         border-radius: 20px;
-         &>a {
-             display: inline-block;
-             width: 70px;
-             line-height: 40px;
-             text-align: center;
-             &:first-child {
-                 background-color: #f7f8fa;
-                 border-radius: 20px;
-             }
-         }
-     }
+    display: flex;
+    align-items: center;
+}
+
+.header > img {
+    width: 25px;
+    margin-top: 5px;
+}
+
+.switchPage {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: 13px auto 0; /* Adjust the top margin as needed */
+}
+
+
+.switchPage > a {
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white; /* Set the background color for all links to white */
+    margin-right: 10px;
+}
+
+.switchPage > a:not(:first-child) {
+    background-color: transparent; /* Set the background color to transparent for all links except the first one */
+}
+
+.switchPage > a:first-child {
+    background-color: #f7f8fa; /* Set the grey shade for the "Exchange" link */
+    width: 100px; /* Set a specific width for the "Exchange" link */
+}
+
+.switchPage > a:nth-child(3) {
+    width: 70px; /* Set a specific width for the "Vote" link */
+}
+
+.switchPage > a:last-child {
+    width: 50px; /* Set a specific width for the "Icon" link */
 }
 ```
 
