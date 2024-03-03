@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+  <title>Layout</title>
+  <style>
+    .wrapper {
+      margin-top: 10px;
+    }
+    
+    .writing-mode {
+      writing-mode: vertical-rl;
+    }
+    .box {
+      border: 1px solid #333333;
+      width: 200px;
+      height: 100px;
+    }
+
+
+    .overflow > div {
+      height: 10em;
+      width: 15em;
+      border: 2px solid blue;
+    }
+
+    .hidden {
+      overflow: hidden;
+    }
+
+    .scroll {
+      overflow: scroll;
+    }
+
+    .auto {
+      overflow: auto;
+    }
+
+    .direction {
+      margin: 10px;
+      width: 100px;
+      border: 3px solid blue;
+      direction:rtl;
+      unicode-bidi: bidi-override; 
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="writing-mode">wtf-css</h1>
+    <br>
+    <div class="box">This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.</div>
+
+    <p>This content is outside of the box.</p>
+
+    <div class="overflow">
+      <h2>hidden</h2>
+      <div class="hidden">
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+      </div>
+      <br>
+
+      <h2>scroll</h2>
+      <div class="scroll">
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+      </div>
+      <br>
+
+      <h2>auto</h2>
+      <div class="auto">
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+        <p>wtf-css</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="direction">
+    wtf-css
+  </div>
+
+</body>
+</html>

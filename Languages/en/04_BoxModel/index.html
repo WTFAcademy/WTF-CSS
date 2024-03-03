@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>BoxModel</title>
+     <style>
+       .center {
+         margin: auto;
+         background: lime;
+         width: 66%;
+       }
+
+       .outside {
+         margin: 3rem 0 0 -3rem;
+         background: cyan;
+         width: 66%;
+       }
+
+       h4 {
+         background-color: lime;
+         padding: 20px 50px;
+       }
+
+       h3 {
+         background-color: cyan;
+         padding: 110px 50px 50px 110px;
+       }
+     </style>
+   </head>
+   <body>
+     <div class="center">This element will be centered. </div>
+     <div class="outside">This element will appear outside the containing block. </div>
+
+     <h4>This element has appropriate padding. </h4>
+     <h3>The padding of this element is huge! </h3>
+   </body>
+</html>
