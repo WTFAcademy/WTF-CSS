@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>
+  <title>Flex</title>
+  <style>
+    .wrapper {
+      margin-top: 10px;
+    }
+    div[class^="box"] {
+      border-radius: 5px;
+      color: #fff;
+      background-color: #4558df;
+      padding: 1em;
+    }
+
+    .demo1 {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .demo2 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .demo3 {
+      display: flex;
+      width: 400px;
+    }
+
+    .demo4 {
+      display: flex;
+      width: 400px;
+      flex-wrap: wrap;
+    }
+
+    .demo5 {
+      display: flex;
+    }
+
+    .demo5 .box1 {
+      flex: 1
+    }
+
+    .demo5 .box2 {
+      flex: 1
+    }
+
+    .demo5 .box3 {
+      flex: 2
+    }
+
+    .demo6 {
+      display: flex;
+    }
+
+    .demo6 .box1 {
+      flex: 1 200px;
+    }
+
+    .demo6 .box2 {
+      flex: 1 200px;
+    }
+
+    .demo6 .box3 {
+      flex: 2 200px;
+    }
+
+    .demo7 {
+      display: flex;
+      align-items: center;
+    }
+    .demo7 .box1 {
+      height: 40px;
+    }
+
+    .demo7 .box2 {
+      height: 80px;
+    }
+
+    .demo7 .box3 {
+      height: 60px;
+    }
+
+    .demo8 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .demo9 {
+      display: flex;
+    }
+
+    .demo9 .box1 {
+      order: 1;
+    }
+
+    .demo9 .box2 {
+      order: 0;
+    }
+
+    .demo9 .box3 {
+      order: -1;
+    }
+
+    .demo10 {
+      display: flex;
+      align-items: center;
+    }
+    .demo10 .inner {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo1 wrapper">
+    <div class="box1">WTF-HTML</div>
+    <div class="box2">WTF-CSS</div>
+    <div class="box3">WTF-Solidity</div>
+  </div>
+
+  <div class="demo2 wrapper">
+    <div class="box1">WTF-HTML</div>
+    <div class="box2">WTF-CSS</div>
+    <div class="box3">WTF-Solidity</div>
+  </div>
+
+  <div class="demo3 wrapper">
+    <div class="box1">WTF-HTML</div>
+    <div class="box2">WTF-CSS</div>
+    <div class="box3">WTF-Solidity</div>
+    <div class="box4">WTF-Ethers</div>
+    <div class="box5">WTF-gm</div>
+    <div class="box6">WTF-ClosedSource</div>
+  </div>
+
+  <div class="demo4 wrapper">
+    <div class="box1">WTF-HTML</div>
+    <div class="box2">WTF-CSS</div>
+    <div class="box3">WTF-Solidity</div>
+    <div class="box4">WTF-Ethers</div>
+    <div class="box5">WTF-gm</div>
+    <div class="box6">WTF-ClosedSource</div>
+  </div>
+
+  <div class="demo5 wrapper">
+    <div class="box1">WTF-HTML</div>
+    <div class="box2">WTF-CSS</div>
+    <div class="box3">WTF-Solidity</div>
+  </div>
+
+  <div class="demo6 wrapper">
+    <div class="box1">WTF-HTML</div>
+    <div class="box2">WTF-CSS</div>
+    <div class="box3">WTF-Solidity</div>
+  </div>
+
+  <div class="demo7 wrapper">
+    <div class="box1">WTF-HTML</div>
+    <div class="box2">WTF-CSS</div>
+    <div class="box3">WTF-Solidity</div>
+  </div>
+
+  <div class="demo8 wrapper">
+    <div class="box1">WTF-HTML</div>
+    <div class="box2">WTF-CSS</div>
+    <div class="box3">WTF-Solidity</div>
+  </div>
+
+  <div class="demo9 wrapper">
+    <div class="box1">WTF-HTML</div>
+    <div class="box2">WTF-CSS</div>
+    <div class="box3">WTF-Solidity</div>
+  </div>
+
+  <div class="demo10 wrapper">
+    <div class="box1">WTF-HTML</div>
+    <div class="inner">
+      <div class="box2">WTF-CSS</div>
+      <div class="box3">WTF-Solidity</div>
+    </div>
+  </div>
+</body>
+</html>
