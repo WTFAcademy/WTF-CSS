@@ -154,112 +154,128 @@ Then there is the style of `swap-page`. After changing `position` to `relative`,
 `padding` also needs to be assigned a value to separate `swap-page` from its children.
 
 ```css
-&>.swap-page {
-         position: relative;
-         background-color: white;
-         width: 446px;
-         height: 298px;
-         left: 50%;
-         margin-left: -223px;
-         border-radius: 20px;
-         padding: 10px;
+.body {
+    margin-top: 80px;
+}
+
+.body > .swap-page {
+    position: relative;
+    background-color: white;
+    width: 446px;
+    height: 298px;
+    left: 50%;
+    margin-left: -223px;
+    border-radius: 20px;
+    padding: 10px;
 }
 ```
 
 Next is `swap-page-header`. Set `margin` to `10px auto` to center it horizontally.
 
 ```css
-&>.swap-page-header {
-             margin:10px auto;
-             width: 422px;
-             height: 20px;
+.body > .swap-page > .swap-page-header {
+    margin: 10px auto;
+    width: 422px;
+    height: 20px;
 }
 ```
 
 Then there are the common styles of `token1` and `token2`. Adjusting their `margin` and `padding` can separate them from their parent and child elements. Adjusting the `padding` of the child element `input` can make the input content not next to the border.
 
 ```css
-& .token1,
-         .token2 {
-             background-color: #f7f8fa;
-             width: 444px;
-             height: 62px;
-             margin: 5px auto;
-             padding: 16px 0;
-             border-radius: 20px;
-             &>input {
-                 background-color: #f7f8fa;
-                 border: none;
-                 line-height: 33px;
-                 font-size: 33px;
-                 width: 294px;
-                 padding: 0 15px;
-             }
-         }
+.body > .swap-page .token1,
+.body > .swap-page .token2 {
+    background-color: #f7f8fa;
+    width: 444px;
+    height: 62px;
+    margin: 5px auto;
+    padding: 16px 0;
+    border-radius: 20px;
+}
+
+.body > .swap-page .token1 > input,
+.body > .swap-page .token2 > input {
+    background-color: #f7f8fa;
+    border: none;
+    line-height: 33px;
+    font-size: 33px;
+    width: 294px;
+    padding: 0 15px;
+}
 ```
 
 Then there are different styles of designs for `token1-btnto` and `token2-btn`.
 
 ```css
-             & .token1-btn {
-                 background-color: #edeef2;
-                 border: none;
-                 width: 91px;
-                 height: 38px;
-                 border-radius: 19px;
-                 line-height: 38px;
-                 & img {
-                     position: relative;
-                     top: 5px;
-                     width: 25px;
-                 }
-                 & span {
-                     font-size: 20px;
-                 }
-             }
-             & .token2-btn {
-                 background-color: #e8006f;
-                 color: white;
-                 border: none;
-                 width: 101px;
-                 height: 38px;
-                 border-radius: 19px;
-                 line-height: 38px;
-                 & span {
-                     font-size: 20px;
-                 }
-             }
+.body > .swap-page .token1 .token1-btn,
+.body > .swap-page .token2 .token1-btn {
+    background-color: #edeef2;
+    border: none;
+    width: 91px;
+    height: 38px;
+    border-radius: 19px;
+    line-height: 38px;
+}
+
+.body > .swap-page .token1 .token1-btn img,
+.body > .swap-page .token2 .token1-btn img {
+    position: relative;
+    top: 5px;
+    width: 25px;
+}
+
+.body > .swap-page .token1 .token1-btn span,
+.body > .swap-page .token2 .token1-btn span {
+    font-size: 20px;
+}
+
+.body > .swap-page .token1 .token2-btn,
+.body > .swap-page .token2 .token2-btn {
+    background-color: #e8006f;
+    color: white;
+    border: none;
+    width: 101px;
+    height: 38px;
+    border-radius: 19px;
+    line-height: 38px;
+}
+
+.body > .swap-page .token1 .token2-btn span,
+.body > .swap-page .token2 .token2-btn span {
+    font-size: 20px;
+}
 ```
 
 Next is the arrow `button` in the middle of the two `input`. Set its `position` to `absolute` to detach it from the document flow, and then adjust its `top`, `left` and `margin-left' `Let it be between two `input`
 
 ```css
-         & .arrow{
-             background-color: #f7f8fa;
-             border: 5px white solid;
-             border-radius: 25%;
-             position: absolute;
-             top:130px;
-             left:50%;
-             margin-left:-10px;
-             &>img{
-                 width: 20px;
-             }
-         }
+.body > .swap-page .arrow {
+    background-color: #f7f8fa;
+    border: 5px white solid;
+    border-radius: 25%;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.body > .swap-page .arrow > img {
+    width: 20px;
+}
 ```
 
 Then there is the `button` connected to the wallet at the end, which does not involve the assignment of position.
 
 ```css
-         & .swap-page-footer-connect{
-                  width: 100%;
-                  height: 55px;
-                  border: none;
-                  border-radius: 13px;
-                  background-color: #fdeaf1;
-                  color: #d50066;
-                  font-size: 16px;
-         }
+.body > .swap-page .swap-page-footer > .swap-page-footer-connect {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 13px;
+    background-color: #fdeaf1;
+    color: #d50066;
+    font-size: 16px;
+}
 ```
 
 At this point, the swap style is completed, and the effect is as follows:
@@ -271,28 +287,28 @@ In the end, only the styles of `chooseLanguage` and `gasPriceAndBlockNumber` are
 First set the `display` of `chooseLanguage` to `inline-block` so that we can adjust its width. After the width is set, we can adjust it through `position`, `left`, `margin-left` and `top` s position.
 
 ```css
-     &>.chooseLanguage{
-         position: relative;
-         display: inline-block;
-         width: 130px;
-         font-size: 12px;
-         left:50%;
-         margin-left: -65px;
-         top:10px;
-     }
+.body > .chooseLanguage {
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    font-size: 12px;
+    left: 50%;
+    margin-left: -65px;
+    top: 10px;
+}
 ```
 
 `gasPriceAndBlockNumber` is located at the bottom right of the page. We can directly set its `position` to `absolute` to get it out of the document flow, and then adjust `top`, `margin-top`, `margin-right` and `right `Let it be in the lower right corner of the page.
 
 ```css
-     &>.gasPriceAndBlockNumber{
-         position: absolute;
-         top:100%;
-         margin-top: -36px;
-         margin-right:20px;
-         right:0;
-         font-size: 10px;
-     }
+.body > .gasPriceAndBlockNumber {
+    position: absolute;
+    top: 100%;
+    margin-top: -36px;
+    margin-right: 20px;
+    right: 0;
+    font-size: 10px;
+}
 ```
 
 At this point, the Uniswap minimalist page is completed, and the effect is as follows:
