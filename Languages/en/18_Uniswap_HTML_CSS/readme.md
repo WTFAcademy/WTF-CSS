@@ -92,52 +92,51 @@ The `position` of `img` in `changeNetwork` must be set to `relative` first, and 
 At the same time, adjust the `margin-right` of the three child elements so that they are not crowded together.
 
 ```css
-     &>.right {
-         display: flex;
-         position: absolute;
-         top: 20px;
-         right: 0;
+     .header > .right {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
 
-         &>.changeNetwork {
+.header > .right > .changeNetwork {
+    background-color: white;
+    margin-right: 10px;
+    width: 120px;
+    border-radius: 15px;
+    text-align: center;
+}
 
-             background-color: white;
-             margin-right: 10px;
-             width: 120px;
-             border-radius: 15px;
-             text-align: center;
+.header > .right > .changeNetwork > img {
+    position: relative;
+    top: 5px;
+    width: 25px;
+}
 
-             &>img {
-                 position: relative;
-                 top: 5px;
-                 width: 25px;
-             }
+.header > .right > .changeNetwork > .Ethereum {
+    line-height: 40px;
+}
 
-             &>.Ethereum {
-                 line-height: 40px;
-             }
-         }
+.header > .right > .connect {
+    background-color: #fdeaf1;
+    color: #d50066;
+    border: 4px white solid;
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+}
 
-         &>.connect {
-             background-color: #fdeaf1;
-             color: #d50066;
-             border: 4px white solid;
-             width: 100px;
-             height: 40px;
-             margin-right: 10px;
-             border-radius: 20px;
-             font-size: 16px;
-         }
-
-         &>.menu {
-             background-color: white;
-             font-size: 20px;
-             border: 4px white solid;
-             width: 42px;
-             height: 40px;
-             margin-right: 10px;
-             border-radius: 15px;
-         }
-     }
+.header > .right > .menu {
+    background-color: white;
+    font-size: 20px;
+    border: 4px white solid;
+    width: 42px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
 ```
 
 This concludes the key points in `header`. The effect is as follows:
