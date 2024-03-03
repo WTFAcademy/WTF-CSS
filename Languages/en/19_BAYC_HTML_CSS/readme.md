@@ -10,7 +10,7 @@ All codes and tutorials are open source on github: [github.com/WTFAcademy/WTF-CS
 
 ---
 
-In this lecture, we will use the preprocessor less to write a minimalist BAYC mint page style sheet. The HTML and img files required for production are already ready. The final effect is as follows:
+In this lecture, we will use the Less preprocessor to write a minimalist BAYC mint page style sheet. The HTML and img files required for production are already ready. The final effect is as follows:
 
 ![Overall effect](./img/19-1.png)
 
