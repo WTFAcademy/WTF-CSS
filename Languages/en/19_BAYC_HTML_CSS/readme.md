@@ -286,4 +286,4 @@ As you can see, the minimalist page we made is very similar to the official page
 
 ## Summary
 
-In this lecture, we used the preprocessor less to write a BAYC minimalist page style sheet, and the effect was very similar to the official page. Students do not have to write exactly the same as this tutorial when practicing on their own, as long as they can achieve the desired effect.
+In this lecture, we used the Less preprocessor to write a BAYC minimalist page style sheet, and the effect was very similar to the official page. Students do not have to write exactly the same as this tutorial when practising on their own, as long as they can achieve the desired effect.
