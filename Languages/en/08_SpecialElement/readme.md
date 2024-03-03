@@ -104,7 +104,7 @@ img {
 ```
 ![](./img/08-22.jpg)
 
-### Pictures with shades
+### Pictures with shadow
 Use the `box-shadow` property to create a shadowed image:
 ```css
 img {
