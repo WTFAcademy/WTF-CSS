@@ -16,7 +16,7 @@ In this lecture, we introduce CSS syntax and three ways to apply CSS in document
 
 CSS rule sets consist of selectors and declaration blocks, as shown in the following figure:
 
-![](./img/2-1.png) ![](./img/2-2.png)
+![](../../../02_Syntax/img/2-1.png) ![](../../../02_Syntax/img/2-2.png)
 
 The selector points to the element you want to style.
 
@@ -40,15 +40,15 @@ We have three ways of using CSS in HTML:
 
 External styles are the most commonly used CSS method. You can write CSS code in an external `.css` file:
 
-![](./img/2-3.png)
+![](../../../02_Syntax/img/2-3.png)
 
-In order to connect `styles.css` and `index.html`, you need to introduce this style file through the `<link>` tag in the `<head>` of the HTML document.
+In order to connect `style.css` and `index.html`, you need to introduce this style file through the `<link>` tag in the `<head>` of the HTML document.
 
 ```html
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="style.css" />
 ```
 
-![](./img/2-4.png)
+![](../../../02_Syntax/img/2-4.png)
 
 In the `<link>` tag, we use the attribute `rel` to let the browser know that a CSS document exists, and use the attribute `href` to specify the location of the CSS file.
 
@@ -56,16 +56,16 @@ In the `<link>` tag, we use the attribute `rel` to let the browser know that a C
 
 You can also write CSS code directly in the `<style>` tag of the HTML file. This style is called an internal style.
 
-![](./img/2-5.png)
+![](../../../02_Syntax/img/2-5.png)
 
 ### 3. Inline styles
 
 If you only want to set the style for an element alone, you can use the `style` attribute in the tag of this element. Such styles are called inline styles.
 
-![](./img/2-6.png)
+![](../../../02_Syntax/img/2-6.png)
 
 The above three methods of introducing CSS can achieve the same effect, making the text color of the `<h1>` element in the page red and the text size 50 pixels. As shown below.
-![](./img/2-7.png)
+![](../../../02_Syntax/img/2-7.png)
 
 We most commonly use external styles, which can separate HTML from CSS and make it more concise.
 
@@ -80,21 +80,21 @@ Conflicts occur when multiple styles are applied to the same element. CSS cascad
 
 Let's look at an example. In this example, we set the text color of the `<h1>` element to blue, green, and red in the external, internal, and inline styles respectively. The effect produced at this time is as shown in the figure below.
 
-![](./img/2-8.png)
+![](../../../02_Syntax/img/2-8.png)
 
-![](./img/2-9.png)
+![](../../../02_Syntax/img/2-9.png)
 
 As you can see, the text color is red because the inline style has the highest priority.
 
-![](./img/2-10.png)
+![](../../../02_Syntax/img/2-10.png)
 
 If we remove the inline styles, the text will turn green (internal styles) because the internal styles are declared further back.
 
-![](./img/2-11.png)
+![](../../../02_Syntax/img/2-11.png)
 
 If we adjust the external style declaration to the internal style, the text turns blue (external style).
 
-![](./img/2-12.png)
+![](../../../02_Syntax/img/2-12.png)
 
 ## Summary
 

@@ -45,7 +45,7 @@ Then we deal with the style of the head. The style of the head of the BAYC offic
 
 ![Head style](./img/19-2.jpg)
 
-The content of the header is relatively small. We can use positioning to solve it. The method is similar to the previous lecture [UniswapHTML&CSS](https://github.com/WTFAcademy/WTF-CSS/tree/main/18_UniswapHTML%26CSS), which will not be discussed here. Again. Don’t forget to modify the `z-index`>=1 of `bayc-logo` so that it is above `video`.
+The content of the header is relatively small. We can use positioning to solve it. The method is similar to the previous lecture [UniswapHTML&CSS](../18_Uniswap_HTML_CSS/readme.md), which will not be discussed here. Again. Don’t forget to modify the `z-index`>=1 of `bayc-logo` so that it is above `video`.
 
 ```css
 .header {

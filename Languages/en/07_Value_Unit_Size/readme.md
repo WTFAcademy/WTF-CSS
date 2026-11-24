@@ -116,7 +116,7 @@ The [image](https://developer.mozilla.org/zh-CN/docs/Web/CSS/image) data type is
 <head>
    <style>
      .image {
-       background-image: url(./img/wtflogo.png);
+       background-image: url(../../../07_Value_Unit_Size/img/wtflogo.png);
      }
 
      .gradient {
@@ -144,7 +144,7 @@ A typical position value consists of two values ​​- the first value sets the
        height: 300px;
        width: 400px;
        border: 3px solid blue;
-       background-image: url(./img/wtflogo.png);
+       background-image: url(../../../07_Value_Unit_Size/img/wtflogo.png);
        background-repeat: no-repeat;
        background-position: 40px right;
      }
